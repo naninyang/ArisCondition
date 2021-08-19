@@ -3,6 +3,8 @@ import { StatusBar, } from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
 import Location from "../components/Location";
+import CurrentAir from '../components/CurrentAir';
+import CurrentVirus from '../components/CurrentVirus';
 
 const StatusGradient = styled.SafeAreaView({
   flex: 0,
@@ -29,7 +31,7 @@ const Header = styled.View({
   paddingRight: 10,
   paddingBottom: 60,
   paddingLeft: 20,
-})
+});
 
 const Button = styled.TouchableOpacity({
   padding: 10,
@@ -39,7 +41,11 @@ const Label = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 14,
   color: '#FFFFFF',
-})
+});
+
+const CurrentView = styled.View({
+  position: 'relative',
+});
 
 const Home = ({ navigation, route }) => {
   const goInfo = () => {
@@ -61,7 +67,10 @@ const Home = ({ navigation, route }) => {
                 <Label>정보  &#xE001;</Label>
               </Button>
             </Header>
-            {/*  */}
+            <CurrentView>
+              <CurrentAir />
+              <CurrentVirus />
+            </CurrentView>
           </Contents>
         </Backgrounds>
       </Container>
