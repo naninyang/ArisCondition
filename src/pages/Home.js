@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StatusBar, } from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
+import Location from "../components/Location";
 
 const StatusGradient = styled.SafeAreaView({
   flex: 0,
@@ -22,22 +23,29 @@ const Contents = styled.ScrollView({
   width: '100%',
 });
 
-const Text = styled.Text({
-  paddingTop: 10,
-  paddingBottom: 70,
+const Header = styled.View({
+  justifyContent: 'space-between',
+  flexDirection: 'row',
+  paddingRight: 10,
+  paddingBottom: 60,
   paddingLeft: 20,
-  color: '#FFFFFF',
-  fontSize: 14,
+})
+
+const Button = styled.TouchableOpacity({
+  padding: 10,
 });
 
-const Button = styled.Button({
+const Label = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 14,
-});
+  color: '#FFFFFF',
+})
 
 const Home = ({ navigation, route }) => {
   const goInfo = () => {
     navigation.navigate('info');
   };
+
   return (
     <>
       <StatusBar hidden={true} />
@@ -45,12 +53,15 @@ const Home = ({ navigation, route }) => {
       <Container>
         <Backgrounds colors={['#FF4E50', '#F9D423']}>
           <Contents contentContainerStyle="flex:1">
-            <Text>위치, 날짜 들어가는 공간</Text>
-            <Button
-              onPress={goInfo}
-              title="정보"
-            >
-            </Button>
+            <Header>
+              <Location />
+              <Button
+                onPress={goInfo}
+              >
+                <Label>정보  &#xE001;</Label>
+              </Button>
+            </Header>
+            {/*  */}
           </Contents>
         </Backgrounds>
       </Container>
