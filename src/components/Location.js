@@ -17,7 +17,13 @@ const Location = () => {
 
   return (
     <CurrentStatus>
-      서울 조원동, {currentMonthDay} {currentWeek} {currentTime}
+      서울 조원동,
+      {' '}
+      {currentMonthDay}
+      {' '}
+      {currentWeek}
+      {' '}
+      {currentTime}
     </CurrentStatus>
   )
 };

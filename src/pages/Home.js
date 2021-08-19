@@ -5,6 +5,7 @@ import styled, { css } from '@emotion/native';
 import Location from "../components/Location";
 import CurrentAir from '../components/CurrentAir';
 import CurrentVirus from '../components/CurrentVirus';
+import CurrentDust from '../components/CurrentDust';
 
 const StatusGradient = styled.SafeAreaView({
   flex: 0,
@@ -70,6 +71,7 @@ const Home = ({ navigation, route }) => {
             <CurrentView>
               <CurrentAir />
               <CurrentVirus />
+              <CurrentDust />
             </CurrentView>
           </Contents>
         </Backgrounds>
