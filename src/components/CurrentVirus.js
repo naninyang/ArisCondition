@@ -23,6 +23,7 @@ function CurrentVirus() {
     <VirusInfo>
       <CurrentVirusWrapper>
         <Coronic>
+          {/* TODO: 코로나19 확진자 JSON 받아오기 */}
           확진자
           1,556명
         </Coronic>

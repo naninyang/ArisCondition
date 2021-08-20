@@ -44,9 +44,7 @@ const Label = styled.Text({
   color: '#FFFFFF',
 });
 
-const CurrentView = styled.View({
-  position: 'relative',
-});
+const CurrentView = styled.View();
 
 const Home = ({ navigation, route }) => {
   const goInfo = () => {
@@ -58,6 +56,7 @@ const Home = ({ navigation, route }) => {
       <StatusBar hidden={true} />
       <StatusGradient></StatusGradient>
       <Container>
+        {/* TODO: 날씨 컨디션에 따라 LinearGradient 컬러값 나오기 처리하기 */}
         <Backgrounds colors={['#FF4E50', '#F9D423']}>
           <Contents contentContainerStyle="flex:1">
             <Header>

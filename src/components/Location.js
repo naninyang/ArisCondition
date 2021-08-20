@@ -17,6 +17,7 @@ const Location = () => {
 
   return (
     <CurrentStatus>
+      {/* TODO: 현재 위치 (lv2, lv4) JSON 받아오기 */}
       서울 조원동,
       {' '}
       {currentMonthDay}
