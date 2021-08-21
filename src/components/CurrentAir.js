@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled, { css } from '@emotion/native';
 
 const AirInfo = styled.View({
@@ -28,7 +28,7 @@ const AirSummary = styled.Text({
 });
 
 const AirData = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Light',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
   color: 'orange',
 });

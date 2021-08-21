@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Dimensions } from 'react-native';
 import styled, { css } from '@emotion/native';
 
@@ -33,7 +33,7 @@ const Dust = styled.Text({
 });
 
 const Temp = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Light',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
   color: 'orange',

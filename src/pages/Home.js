@@ -61,9 +61,7 @@ const Home = ({ navigation, route }) => {
           <Contents contentContainerStyle="flex:1">
             <Header>
               <Location />
-              <Button
-                onPress={goInfo}
-              >
+              <Button onPress={goInfo}>
                 <Label>정보  &#xE001;</Label>
               </Button>
             </Header>
