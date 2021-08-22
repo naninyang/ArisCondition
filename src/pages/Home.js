@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StatusBar, } from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
+import useLocation from '../utils/useLocation';
 import Location from "../components/Location";
 import CurrentAir from '../components/CurrentAir';
 import CurrentVirus from '../components/CurrentVirus';
@@ -47,6 +48,8 @@ const Label = styled.Text({
 const CurrentView = styled.View();
 
 const Home = ({ navigation, route }) => {
+  const location = useLocation();
+
   const goInfo = () => {
     navigation.navigate('info');
   };

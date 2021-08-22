@@ -1,47 +1,45 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { storeLocation, getLocation } from "./storeApi";
-import useGeoLocation from "./useGeoLocation";
+import { useState, } from "react";
+import Geolocation from '@react-native-community/geolocation';
+// import axios from 'axios';
 
-const API_KEY = "18C657E2-D781-3799-8626-496EDE6DCF70";
+function useLocation() {
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLogitude] = useState(null);
 
-// fetch api with axios
-const url = "https://api.vworld.kr/req/address";
+  const getLocation = () => {
+    Geolocation.getCurrentPosition(
+      position => {
+        const latitude = JSON.stringify(position.coords.latitude);
+        const longitude = JSON.stringify(position.coords.longitude);
 
-const callAPI = axios.create({
-  baseURL: url,
-  timeout: 1000,
-});
+        setLatitude(latitude);
+        setLogitude(longitude);
+      },
+      error => { console.log(error.code, error.message); },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
+    );
+  }
 
-export default function useLocation(lat, lon) {
-  const [location, setLocation] = useState(null);
-  const latLon = useGeoLocation();
+  // getLocation();
 
-  useEffect(() => {
-    if (latLon) fetchAPI(...latLon);
-  }, [latLon]);
+  // const [address, setAddress] = useState([]);
 
-  const fetchAPI = async (lat, lon) => {
-    try {
-      const endpoint = `?service=address&type=both&request=getAddress&key=${API_KEY}&point=${lon},${lat}`;
-      const res = await callAPI.get(endpoint);
-      const data = await storeLocation(filterData(res.data));
-      console.log("API conection successed");
-      setLocation(data);
-    } catch (err) {
-      console.log("API conection failed");
-      const data = await getLocation();
-    }
-  };
-
-  return location;
+  // const API_URL = 'http://api.vworld.kr/req/address';
+  // const API_KEY = '18C657E2-D781-3799-8626-496EDE6DCF70';
+  // axios.get(API_URL, {
+  //   params: {
+  //     key: API_KEY,
+  //     service: 'address',
+  //     request: 'GetAddress',
+  //     // point: `${longitude},${latitude}`,
+  //     point: '126.91438,37.481503',
+  //     type: 'parcel',
+  //   }
+  // })
+  //   .then(response => {
+  //     setAddress(response.data.response.result);
+  //   })
+  //   .catch(console.warn)
 }
 
-const filterData = (rawData) => {
-  return {
-    structure: {
-      level1: rawData.response.result.structure.level1,
-      level2: rawData.response.result.structure.level4L,
-    },
-  };
-};
+export default useLocation;

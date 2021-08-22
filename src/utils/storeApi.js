@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // connect Database
-export const storeWeather = async (value) => {
+export const storeApi = async (value) => {
   try {
     const jsonValue = JSON.stringify(value);
     await AsyncStorage.setItem("@storage_Key", jsonValue);
@@ -12,7 +12,7 @@ export const storeWeather = async (value) => {
   }
 };
 
-export const getWeather = async () => {
+export const getApi = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem("@storage_Key");
     jsonValue === undefined
