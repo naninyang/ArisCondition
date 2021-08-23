@@ -1,7 +1,7 @@
 import Geolocation from '@react-native-community/geolocation';
 import { useState, useEffect } from "react";
 
-export default function useGeoLocation(lat, lon) {
+function useGeoLocation(lat, lon) {
   const [latLon, setLatLon] = useState(null);
 
   useEffect(() => {
@@ -18,3 +18,5 @@ export default function useGeoLocation(lat, lon) {
 
   return latLon;
 }
+
+export default useGeoLocation;
