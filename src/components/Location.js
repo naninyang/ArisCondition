@@ -42,16 +42,13 @@ const Location = () => {
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
     )
   }
-  // geoLocation();
-  // console.log(`${longitude},${latitude}`);
 
   axios.get(API_URL, {
     params: {
       key: API_KEY,
       service: 'address',
       request: 'GetAddress',
-      // point: `${longitude},${latitude}`,
-      point: '126.91438,37.481503',
+      point: '126.95906,37.5576695',
       type: 'parcel',
     }
   })
@@ -66,8 +63,9 @@ const Location = () => {
         return (
           <CurrentStatus key={item.structure.level5}>
             {item.structure.level1}
-            {' '}
-            {item.structure.level4L}
+            {/* TODO: GeoLocation 사용 가능해질 때 level4L 불러오기 */}
+            {/* {' '}
+            {item.structure.level4L} */}
           </CurrentStatus>
         )
       })}
