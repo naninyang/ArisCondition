@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled, { css } from '@emotion/native';
 
 const AirInfo = styled.View({
@@ -33,20 +34,181 @@ const AirData = styled.Text({
   color: 'orange',
 });
 
+const API_URL = 'https://api.waqi.info/feed/geo:37.5576695;126.95906/';
+const API_KEY = '44c176891ebfbf99df09758fc4060341f157c878';
+
 function CurrentAir() {
+  const [aqi, setAqi] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(`${API_URL}?token=${API_KEY}`).then((response) => {
+      setAqi(response.data);
+    });
+  }, []);
+
+  if (!aqi) return null;
+
   return (
     <AirInfo>
       <CurrentAirWrapper>
         <AirInfoWrapper>
           <AirDescription>
-            {/* TODO: 미세먼지 상태 JSON 받아오기 */}
-            <AirSummary>미세먼지 좋음</AirSummary>
-            <AirData>18㎍/㎥</AirData>
+            {
+              (() => {
+                if (aqi.data.iaqi.pm10.v < 16) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      최고
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 31) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      좋음
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 41) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      양호
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 51) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      보통
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 76) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 101) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      상당히 나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 151) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      매우 나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v > 150) {
+                  return (
+                    <AirSummary>
+                      미세먼지
+                      {' '}
+                      최악
+                    </AirSummary>
+                  )
+                }
+              })()
+            }
+            <AirData>{aqi.data.iaqi.pm10.v}㎍/㎥</AirData>
           </AirDescription>
           <AirDescription>
-            {/* TODO: 초미세먼지 상태 JSON 받아오기 */}
-            <AirSummary>초미세먼지 좋음</AirSummary>
-            <AirData>18㎍/㎥</AirData>
+            {
+              (() => {
+                if (aqi.data.iaqi.pm10.v < 9) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      최고
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 16) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      좋음
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 21) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      양호
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 26) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      보통
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 38) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 51) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      상당히 나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 76) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      매우 나쁨
+                    </AirSummary>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v > 75) {
+                  return (
+                    <AirSummary>
+                      초미세먼지
+                      {' '}
+                      최악
+                    </AirSummary>
+                  )
+                }
+              })()
+            }
+            <AirData>{aqi.data.iaqi.pm25.v}㎍/㎥</AirData>
           </AirDescription>
         </AirInfoWrapper>
       </CurrentAirWrapper>
