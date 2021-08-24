@@ -81,6 +81,16 @@ const InfoItem = [
     title: '브이월드 공간정보 오픈플랫폼',
     link: 'apiVworld',
   },
+  {
+    id: '2',
+    title: 'Air Quality Programmatic APIs',
+    link: 'apiAqp',
+  },
+  {
+    id: '3',
+    title: '굿바이★로나',
+    link: 'apiVirus',
+  },
 ];
 
 function Licenses({ navigation, route }) {

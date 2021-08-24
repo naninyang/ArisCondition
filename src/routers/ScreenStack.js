@@ -14,6 +14,8 @@ import LicenseReactNativeScreens from '../pages/Info/Licenses/LicenseReactNative
 
 import Apis from '../pages/Info/Apis/Apis';
 import ApiVworld from '../pages/Info/Apis/ApiVworld';
+import ApiAqp from '../pages/Info/Apis/ApiAqp';
+import ApiVirus from '../pages/Info/Apis/ApiVirus';
 
 import AppInfo from '../pages/Info/App/AppInfo';
 
@@ -67,6 +69,14 @@ function ScreenStack() {
       <HomeStack.Screen
         name='apiVworld'
         component={ApiVworld}
+      />
+      <HomeStack.Screen
+        name='apiAqp'
+        component={ApiAqp}
+      />
+      <HomeStack.Screen
+        name='apiVirus'
+        component={ApiVirus}
       />
 
       <HomeStack.Screen
