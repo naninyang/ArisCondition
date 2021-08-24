@@ -42,62 +42,53 @@ const Contents = styled.View({
   margin: 20,
 });
 
-const AppNameKorean = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Bold',
-  fontSize: 20,
-  color: '#FFFFFF',
+const List = styled.View({
+  marginBottom: 10,
 });
 
-const AppNameEnglish = styled.Text({
-  marginTop: 5,
-  fontFamily: 'SpoqaHanSansNeo-Regular',
+const Term = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 14,
   color: '#FFFFFF',
 });
 
-const Copyright = styled.View({
-  flexDirection: 'row',
-  marginTop: 20,
-});
-
-const TextBold = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Bold',
-  fontSize: 10,
+const Description = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Regular',
+  fontSize: 12,
   color: '#FFFFFF',
 });
 
-const TextRegular = styled.Text({
+const Copyright = styled.Text({
+  paddingTop: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 10,
   color: '#FFFFFF',
 });
 
-function AppInfo({ navigation, route }) {
+function ApiVworld({ navigation, route }) {
   return (
     <Container>
       <Header>
-        <Button onPress={() => { navigation.navigate('info') }}>
+        <Button onPress={() => { navigation.navigate('apis') }}>
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
-          <HeadingLabel>앱 정보</HeadingLabel>
+          <HeadingLabel>브이월드 공간정보 오픈플랫폼</HeadingLabel>
         </Heading>
       </Header>
       <Contents>
-        <AppNameKorean>아리스 컨디션 v1.0.0</AppNameKorean>
-        <AppNameEnglish>ARIS condition v1.0.0</AppNameEnglish>
-        <Copyright>
-          <TextRegular>Copyright 2021</TextRegular>
-          <TextBold>
-            {' '}
-            ARIS develop,
-            {' '}
-          </TextBold>
-          <TextRegular>All Rights Resevered.</TextRegular>
-        </Copyright>
+        <List>
+          <Term>Service URI</Term>
+          <Description>https://www.vworld.kr</Description>
+        </List>
+        <List>
+          <Term>Service API</Term>
+          <Description>https://api.vworld.kr/req/address</Description>
+        </List>
+        <Copyright>Copyright © 2012~2019. Open Platform All Rights Reserved.</Copyright>
       </Contents>
     </Container>
   )
 }
 
-export default AppInfo;
+export default ApiVworld;
