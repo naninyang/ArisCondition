@@ -37,6 +37,7 @@ function CurrentVirus() {
     <VirusInfo>
       <CurrentVirusWrapper>
         <Coronic>
+          {/* TODO: 수도권 사회적거리두기 단계 표기 */}
           확진자
           {' '}
           {coronic.korea.newCase}명

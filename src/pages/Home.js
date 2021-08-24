@@ -50,10 +50,6 @@ const CurrentView = styled.View();
 const Home = ({ navigation, route }) => {
   const location = useLocation();
 
-  const goInfo = () => {
-    navigation.navigate('info');
-  };
-
   return (
     <>
       <StatusBar hidden={true} />
@@ -64,7 +60,7 @@ const Home = ({ navigation, route }) => {
           <Contents contentContainerStyle="flex:1">
             <Header>
               <Location />
-              <Button onPress={goInfo}>
+              <Button onPress={() => { navigation.navigate('info'); }}>
                 <Label>정보  &#xE001;</Label>
               </Button>
             </Header>

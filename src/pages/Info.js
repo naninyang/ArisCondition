@@ -30,45 +30,103 @@ const Heading = styled.View({
   height: 44,
   justifyContent: 'center',
   alignItems: 'center',
-})
+});
 
 const HeadingLabel = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 17,
   color: '#FFFFFF',
-})
-
-const InfoList = styled.View({
-  paddingVertical: 10,
 });
 
-const ListItem = styled.Text({
-  height: 45,
+const InfoList = styled.FlatList({
+  marginVertical: 10,
+  borderTopWidth: 1,
+  borderTopColor: '#707070',
+});
+
+const LinkItem = styled.View({
+  backgroundColor: '#1C1C1E',
   paddingHorizontal: 15,
+});
+
+const LinkItemWrapper = styled.View({
+  borderBottomWidth: 1,
+  borderBottomColor: '#707070',
+});
+
+const Link = styled.TouchableOpacity({
+  flexDirection: 'row',
+  height: 45,
+  alignItems: 'center',
+});
+
+const LinkLabel = styled.Text({
+  flex: 1,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 17,
   color: '#FFFFFF',
 });
 
+const LabelBullet = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Regular',
+  fontSize: 17,
+  opacity: .3,
+  color: '#EBEBF5',
+});
+
+const InfoItem = [
+  {
+    id: '1',
+    title: '오픈소스 라이선스',
+    link: 'licenses',
+  },
+  {
+    id: '2',
+    title: 'APIs',
+    link: 'apis',
+  },
+  {
+    id: '3',
+    title: '앱 정보',
+    link: 'appinfo',
+  },
+];
+
 function Info({ navigation, route }) {
-  const goBack = () => {
-    navigation.navigate('home');
+  const Item = ({ title, link }) => (
+    <LinkItem>
+      <LinkItemWrapper>
+        <Link onPress={() => { navigation.navigate(link) }}>
+          <LinkLabel>{title}</LinkLabel>
+          <LabelBullet>&#xE001;</LabelBullet>
+        </Link>
+      </LinkItemWrapper>
+    </LinkItem>
+  );
+  const renderItem = ({ item }) => {
+    return (
+      <Item
+        title={item.title}
+        link={item.link}
+      />
+    )
   };
 
   return (
     <Container>
-      {/* TODO: 헤더(뒤로가기 버튼, 정보 타이틀), 목록 작업하기 */}
       <Header>
-        <Button onPress={goBack}>
+        <Button onPress={() => { navigation.navigate('home') }}>
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
           <HeadingLabel>정보</HeadingLabel>
         </Heading>
       </Header>
-      <InfoList>
-        <ListItem>No content yet.</ListItem>
-      </InfoList>
+      <InfoList
+        data={InfoItem}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
     </Container>
   )
 }

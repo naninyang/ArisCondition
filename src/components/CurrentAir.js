@@ -53,6 +53,7 @@ function CurrentAir() {
       <CurrentAirWrapper>
         <AirInfoWrapper>
           <AirDescription>
+            {/* TODO: 미세먼지 단계에 따라서 아이콘 적용 */}
             {
               (() => {
                 if (aqi.data.iaqi.pm10.v < 16) {
