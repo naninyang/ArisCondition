@@ -80,7 +80,7 @@ function LicenseReact({ navigation, route }) {
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
-          <HeadingLabel>React</HeadingLabel>
+          <HeadingLabel>React Native</HeadingLabel>
         </Heading>
       </Header>
       <Contents>

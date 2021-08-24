@@ -49,9 +49,9 @@ const Code = styled.Text({
 });
 
 let code = `
-MIT License
+The MIT License (MIT)
 
-Copyright (c) Facebook, Inc. and its affiliates.
+Copyright (c) 2016 Krzysztof Magiera
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -80,7 +80,7 @@ function LicenseReact({ navigation, route }) {
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
-          <HeadingLabel>React</HeadingLabel>
+          <HeadingLabel>React Native Gesture Handler</HeadingLabel>
         </Heading>
       </Header>
       <Contents>

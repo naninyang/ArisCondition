@@ -6,6 +6,11 @@ import Info from '../pages/Info';
 
 import Licenses from '../pages/Info/Licenses/Licenses';
 import LicenseReact from '../pages/Info/Licenses/LicenseReact';
+import LicenseReactNative from '../pages/Info/Licenses/LicenseReactNative';
+import LicenseReactNativeGestureHandler from '../pages/Info/Licenses/LicenseReactNativeGestureHandler';
+import LicenseReactNativeLinearGradient from '../pages/Info/Licenses/LicenseReactNativeLinearGradient';
+import LicenseReactNativeSafeAreaContext from '../pages/Info/Licenses/LicenseReactNativeSafeAreaContext';
+import LicenseReactNativeScreens from '../pages/Info/Licenses/LicenseReactNativeScreens';
 
 import Apis from '../pages/Info/Apis/Apis';
 import ApiVworld from '../pages/Info/Apis/ApiVworld';
@@ -33,6 +38,26 @@ function ScreenStack() {
       <HomeStack.Screen
         name='licenseReact'
         component={LicenseReact}
+      />
+      <HomeStack.Screen
+        name='licenseReactNative'
+        component={LicenseReactNative}
+      />
+      <HomeStack.Screen
+        name='licenseReactNativeGestureHandler'
+        component={LicenseReactNativeGestureHandler}
+      />
+      <HomeStack.Screen
+        name='licenseReactNativeLinearGradient'
+        component={LicenseReactNativeLinearGradient}
+      />
+      <HomeStack.Screen
+        name='licenseReactNativeSafeAreaContext'
+        component={LicenseReactNativeSafeAreaContext}
+      />
+      <HomeStack.Screen
+        name='licenseReactNativeScreens'
+        component={LicenseReactNativeScreens}
       />
 
       <HomeStack.Screen

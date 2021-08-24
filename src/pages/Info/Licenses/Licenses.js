@@ -75,11 +75,37 @@ const LabelBullet = styled.Text({
 });
 
 // TO-DO: Package Open Licenses List
+// TO-DO: Fonts Licenses List
 const InfoItem = [
   {
     id: '1',
     title: 'React',
     link: 'licenseReact',
+  },
+  {
+    id: '2',
+    title: 'React Native',
+    link: 'licenseReactNative',
+  },
+  {
+    id: '3',
+    title: 'React Native Gesture Handler',
+    link: 'licenseReactNativeGestureHandler',
+  },
+  {
+    id: '4',
+    title: 'react-native-linear-gradient',
+    link: 'licenseReactNativeLinearGradient',
+  },
+  {
+    id: '5',
+    title: 'react-native-safe-area-context',
+    link: 'licenseReactNativeSafeAreaContext',
+  },
+  {
+    id: '6',
+    title: 'React Native Screens',
+    link: 'licenseReactNativeScreens',
   },
 ];
 

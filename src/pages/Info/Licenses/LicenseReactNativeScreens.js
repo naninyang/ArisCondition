@@ -49,9 +49,9 @@ const Code = styled.Text({
 });
 
 let code = `
-MIT License
+The MIT License (MIT)
 
-Copyright (c) Facebook, Inc. and its affiliates.
+Copyright (c) 2018 Krzysztof Magiera
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `;
 
-function LicenseReact({ navigation, route }) {
+function LicenseReactNativeScreens({ navigation, route }) {
   return (
     <Container>
       <Header>
@@ -80,7 +80,7 @@ function LicenseReact({ navigation, route }) {
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
-          <HeadingLabel>React</HeadingLabel>
+          <HeadingLabel>React Native Screens</HeadingLabel>
         </Heading>
       </Header>
       <Contents>
@@ -90,4 +90,4 @@ function LicenseReact({ navigation, route }) {
   )
 }
 
-export default LicenseReact;
+export default LicenseReactNativeScreens;
