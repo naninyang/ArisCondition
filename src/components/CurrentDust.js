@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { Dimensions } from 'react-native';
 import styled, { css } from '@emotion/native';
-
-const screen = Dimensions.get('screen');
 
 const DustInfo = styled.View({
   paddingVertical: 10,
@@ -60,9 +57,10 @@ const DustIconView = styled.View({
   width: 170,
   height: 170,
   position: 'absolute',
-  top: screen.height - 350,
+  bottom: 0,
   right: 0,
   overflow: 'hidden',
+  zIndex: 99999,
 });
 
 const LargeIcon = styled.Text({
