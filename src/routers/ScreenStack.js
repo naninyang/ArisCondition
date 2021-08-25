@@ -1,23 +1,24 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
+
 import Home from '../pages/Home';
 import Info from '../pages/Info';
 
-import Licenses from '../pages/Info/Licenses/Licenses';
-import LicenseReact from '../pages/Info/Licenses/LicenseReact';
-import LicenseReactNative from '../pages/Info/Licenses/LicenseReactNative';
-import LicenseReactNativeGestureHandler from '../pages/Info/Licenses/LicenseReactNativeGestureHandler';
-import LicenseReactNativeLinearGradient from '../pages/Info/Licenses/LicenseReactNativeLinearGradient';
-import LicenseReactNativeSafeAreaContext from '../pages/Info/Licenses/LicenseReactNativeSafeAreaContext';
-import LicenseReactNativeScreens from '../pages/Info/Licenses/LicenseReactNativeScreens';
+import Licenses from '../pages/info/licenses/Licenses';
+import LicenseReact from '../pages/info/licenses/LicenseReact';
+import LicenseReactNative from '../pages/info/licenses/LicenseReactNative';
+import LicenseReactNativeGestureHandler from '../pages/info/licenses/LicenseReactNativeGestureHandler';
+import LicenseReactNativeLinearGradient from '../pages/info/licenses/LicenseReactNativeLinearGradient';
+import LicenseReactNativeSafeAreaContext from '../pages/info/licenses/LicenseReactNativeSafeAreaContext';
+import LicenseReactNativeScreens from '../pages/info/licenses/LicenseReactNativeScreens';
 
-import Apis from '../pages/Info/Apis/Apis';
-import ApiVworld from '../pages/Info/Apis/ApiVworld';
-import ApiAqp from '../pages/Info/Apis/ApiAqp';
-import ApiVirus from '../pages/Info/Apis/ApiVirus';
+import Apis from '../pages/info/apis/Apis';
+import ApiVworld from '../pages/info/apis/ApiVworld';
+import ApiAqp from '../pages/info/apis/ApiAqp';
+import ApiVirus from '../pages/info/apis/ApiVirus';
 
-import AppInfo from '../pages/Info/App/AppInfo';
+import AppInfo from '../pages/info/app/AppInfo';
 
 const HomeStack = createStackNavigator();
 
