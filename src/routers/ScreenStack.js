@@ -2,23 +2,23 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 
-import Home from '../pages/Home';
-import Info from '../pages/Info';
+import Home from '../screens/Home';
+import Info from '../screens/Info';
 
-import Licenses from '../pages/info/licenses/Licenses';
-import LicenseReact from '../pages/info/licenses/LicenseReact';
-import LicenseReactNative from '../pages/info/licenses/LicenseReactNative';
-import LicenseReactNativeGestureHandler from '../pages/info/licenses/LicenseReactNativeGestureHandler';
-import LicenseReactNativeLinearGradient from '../pages/info/licenses/LicenseReactNativeLinearGradient';
-import LicenseReactNativeSafeAreaContext from '../pages/info/licenses/LicenseReactNativeSafeAreaContext';
-import LicenseReactNativeScreens from '../pages/info/licenses/LicenseReactNativeScreens';
+import Licenses from '../screens/info/licenses/Licenses';
+import LicenseReact from '../screens/info/licenses/LicenseReact';
+import LicenseReactNative from '../screens/info/licenses/LicenseReactNative';
+import LicenseReactNativeGestureHandler from '../screens/info/licenses/LicenseReactNativeGestureHandler';
+import LicenseReactNativeLinearGradient from '../screens/info/licenses/LicenseReactNativeLinearGradient';
+import LicenseReactNativeSafeAreaContext from '../screens/info/licenses/LicenseReactNativeSafeAreaContext';
+import LicenseReactNativeScreens from '../screens/info/licenses/LicenseReactNativeScreens';
 
-import Apis from '../pages/info/apis/Apis';
-import ApiVworld from '../pages/info/apis/ApiVworld';
-import ApiAqp from '../pages/info/apis/ApiAqp';
-import ApiVirus from '../pages/info/apis/ApiVirus';
+import Apis from '../screens/info/apis/Apis';
+import ApiVworld from '../screens/info/apis/ApiVworld';
+import ApiAqp from '../screens/info/apis/ApiAqp';
+import ApiVirus from '../screens/info/apis/ApiVirus';
 
-import AppInfo from '../pages/info/app/AppInfo';
+import AppInfo from '../screens/info/app/AppInfo';
 
 const HomeStack = createStackNavigator();
 
