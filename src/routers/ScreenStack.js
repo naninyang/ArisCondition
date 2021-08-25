@@ -2,8 +2,8 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 
-import Home from '../screens/Home';
-import Info from '../screens/Info';
+import Home from '../screens/home/Home';
+import Info from '../screens/info/Info';
 
 import Licenses from '../screens/info/licenses/Licenses';
 import LicenseReact from '../screens/info/licenses/LicenseReact';

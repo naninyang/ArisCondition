@@ -5,12 +5,12 @@ import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
 
-import useLocation from '../utils/useLocation';
+import useLocation from '../../utils/useLocation';
 
-import Location from "./home/summary/Location";
-import CurrentAir from './home/summary/CurrentAir';
-import CurrentVirus from './home/summary/CurrentVirus';
-import CurrentDust from './home/summary/CurrentDust';
+import Location from "./summary/Location";
+import CurrentAir from './summary/CurrentAir';
+import CurrentVirus from './summary/CurrentVirus';
+import CurrentDust from './summary/CurrentDust';
 
 const status = getStatusBarHeight(true);
 if (isIphoneX()) screenHeight = Dimensions.get('window').height - status - getBottomSpace();
