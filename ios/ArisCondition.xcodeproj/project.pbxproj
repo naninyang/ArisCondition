@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		29F032B2CAB64637BB270E11 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */; };
 		37B36865F5E343089658375C /* Pe-icon-7-weather.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5D9E35B556432082AC3925 /* Pe-icon-7-weather.otf */; };
+		44F8F64DA8D846C7B8FD74D5 /* FiraCode-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05B70715DC514D1ABE8C7F73 /* FiraCode-Regular.otf */; };
 		45A61DBB5E89406AA14A16A2 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B80B17C0A334251BFF5B6F6 /* SpoqaHanSansNeo-Bold.otf */; };
 		4F5F7E8EE1C649058207D18F /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -20,7 +21,6 @@
 		B1CD8BF299F94478A663C290 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */; };
 		C33A0230B39F79132CBF720C /* libPods-ArisCondition-ArisConditionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C0E547C73F922B59EA328D /* libPods-ArisCondition-ArisConditionTests.a */; };
 		F77B7AC96DD64C838BAEE799 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 59773AAA1D7A48AE9F05F871 /* SpoqaHanSansNeo-Light.otf */; };
-		44F8F64DA8D846C7B8FD74D5 /* FiraCode-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05B70715DC514D1ABE8C7F73 /* FiraCode-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 		00E356EE1AD99517003FC87E /* ArisConditionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArisConditionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ArisConditionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArisConditionTests.m; sourceTree = "<group>"; };
+		05B70715DC514D1ABE8C7F73 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FiraCode-Regular.otf"; path = "../assets/fonts/FiraCode-Regular.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ArisCondition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArisCondition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ArisCondition/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ArisCondition/AppDelegate.m; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		C04690D0A8189E9644C06782 /* Pods-ArisCondition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition.debug.xcconfig"; path = "Target Support Files/Pods-ArisCondition/Pods-ArisCondition.debug.xcconfig"; sourceTree = "<group>"; };
 		E664A20F418E8727FDD7D683 /* Pods-ArisCondition-ArisConditionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition-ArisConditionTests.release.xcconfig"; path = "Target Support Files/Pods-ArisCondition-ArisConditionTests/Pods-ArisCondition-ArisConditionTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		05B70715DC514D1ABE8C7F73 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; name = "FiraCode-Regular.otf"; path = "../assets/fonts/FiraCode-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

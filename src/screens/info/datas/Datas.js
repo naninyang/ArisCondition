@@ -77,27 +77,17 @@ const LabelBullet = styled.Text({
 const InfoItem = [
   {
     id: '1',
-    title: '오픈소스 라이선스',
-    link: 'licenses',
+    title: '공기질 데이터',
+    link: 'dataAqp',
   },
   {
     id: '2',
-    title: 'APIs',
-    link: 'apis',
-  },
-  {
-    id: '3',
-    title: '데이터 정보',
-    link: 'datas',
-  },
-  {
-    id: '4',
-    title: '앱 정보',
-    link: 'appinfo',
+    title: '바이러스 확진자 데이터',
+    link: 'dataVirus',
   },
 ];
 
-function Info({ navigation, route }) {
+function Datas({ navigation, route }) {
   const Item = ({ title, link }) => (
     <LinkItem>
       <LinkItemWrapper>
@@ -120,11 +110,11 @@ function Info({ navigation, route }) {
   return (
     <Container>
       <Header>
-        <Button onPress={() => { navigation.navigate('home') }}>
+        <Button onPress={() => { navigation.navigate('info') }}>
           <ButtonLabel>&#xE000;</ButtonLabel>
         </Button>
         <Heading>
-          <HeadingLabel>정보</HeadingLabel>
+          <HeadingLabel>데이터 정보</HeadingLabel>
         </Heading>
       </Header>
       <InfoList
@@ -136,4 +126,4 @@ function Info({ navigation, route }) {
   )
 }
 
-export default Info;
+export default Datas;

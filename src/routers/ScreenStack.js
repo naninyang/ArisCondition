@@ -18,6 +18,10 @@ import ApiVworld from '../screens/info/apis/ApiVworld';
 import ApiAqp from '../screens/info/apis/ApiAqp';
 import ApiVirus from '../screens/info/apis/ApiVirus';
 
+import Datas from '../screens/info/datas/Datas';
+import DataAqp from '../screens/info/datas/DataAqp';
+import DataVirus from '../screens/info/datas/DataVirus';
+
 import AppInfo from '../screens/info/app/AppInfo';
 
 const HomeStack = createStackNavigator();
@@ -78,6 +82,19 @@ function ScreenStack() {
       <HomeStack.Screen
         name='apiVirus'
         component={ApiVirus}
+      />
+
+      <HomeStack.Screen
+        name='datas'
+        component={Datas}
+      />
+      <HomeStack.Screen
+        name='dataAqp'
+        component={DataAqp}
+      />
+      <HomeStack.Screen
+        name='dataVirus'
+        component={DataVirus}
       />
 
       <HomeStack.Screen
