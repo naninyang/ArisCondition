@@ -36,3 +36,32 @@ $ npx react-native run-android
 ```
 
 참고로, Metro는 계속 실행 중인 상태로 두어야 하기 때문에 iOS/AOS 실행은 새로운 터미널을 띄우고 명령어를 넣어야 합니다.
+
+### APIs
+#### Vworld Geocoder API 2.0
+* **서비스 URL:**
+https://www.vworld.kr
+* **가입 후 Key 신청**
+* **API 문서:**
+https://www.vworld.kr/dev/v4dv_geocoderguide2_s002.do
+
+#### Air Quality Programmatic APIs
+* **서비스 URL:**
+https://aqicn.org/api
+* **API Key 신청 URL:**
+https://aqicn.org/data-platform/token/#/
+* **API 문서:**
+https://aqicn.org/json-api/doc
+* **사용중인 API:**
+https://api.waqi.info/feed/geo
+
+#### Goodbye-corona API
+* **서비스 URL:**
+https://api.corona-19.kr
+* **Key 신청 후 신청한 이메일 확인**
+* **API 문서:**
+https://github.com/dhlife09/Corona-19-API
+* **사용중인 API:**
+https://api.corona-19.kr/korea/country/new
+
+API Key는 개발자 개인이 신청하여 발급받은 Key를 로컬에 세팅하여 개발하여야 합니다.
