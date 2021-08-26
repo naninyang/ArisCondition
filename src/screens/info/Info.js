@@ -77,21 +77,26 @@ const LabelBullet = styled.Text({
 const InfoItem = [
   {
     id: '1',
+    title: '후원하기',
+    link: 'donate',
+  },
+  {
+    id: '2',
     title: '오픈소스 라이선스',
     link: 'licenses',
   },
   {
-    id: '2',
+    id: '3',
     title: 'APIs',
     link: 'apis',
   },
   {
-    id: '3',
+    id: '4',
     title: '데이터 정보',
     link: 'datas',
   },
   {
-    id: '4',
+    id: '5',
     title: '앱 정보',
     link: 'appinfo',
   },

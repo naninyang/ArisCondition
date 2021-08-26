@@ -5,6 +5,8 @@ import 'react-native-gesture-handler';
 import Home from '../screens/home/Home';
 import Info from '../screens/info/Info';
 
+import Donate from '../screens/info/donate/Donate';
+
 import Licenses from '../screens/info/licenses/Licenses';
 import LicenseReact from '../screens/info/licenses/LicenseReact';
 import LicenseReactNative from '../screens/info/licenses/LicenseReactNative';
@@ -36,6 +38,11 @@ function ScreenStack() {
       <HomeStack.Screen
         name='info'
         component={Info}
+      />
+
+      <HomeStack.Screen
+        name='donate'
+        component={Donate}
       />
 
       <HomeStack.Screen
