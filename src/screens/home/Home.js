@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { StatusBar, Dimensions, } from "react-native";
+import { StatusBar, Dimensions, } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
 
-import useLocation from '../../utils/useLocation';
+import useWeather from '../../utils/useWeather';
 
-import Location from "./summary/Location";
+import LoadingDust from '../loading/LoadingDust';
+
+import Location from './summary/Location';
 import CurrentAir from './summary/CurrentAir';
 import CurrentVirus from './summary/CurrentVirus';
 import CurrentDust from './summary/CurrentDust';
@@ -37,7 +39,6 @@ const Contents = styled.ScrollView({
 
 const Summary = styled.View({
   height: screenHeight,
-  // height: 812,
 });
 
 const Header = styled.View({
@@ -62,8 +63,11 @@ const CurrentView = styled.View({
   flex: 1,
 });
 
+const Text = styled.Text({
+})
+
 const Home = ({ navigation, route }) => {
-  const location = useLocation();
+  const weather = useWeather();
 
   return (
     <>
@@ -72,7 +76,7 @@ const Home = ({ navigation, route }) => {
       <Container>
         {/* TODO: 날씨 컨디션에 따라 LinearGradient 컬러값 나오기 처리하기 */}
         <Backgrounds colors={['#FF4E50', '#F9D423']}>
-          <Contents contentContainerStyle="flex:1">
+          <Contents contentContainerStyle='flex:1'>
             <Summary>
               <Header>
                 <Location />
@@ -83,7 +87,7 @@ const Home = ({ navigation, route }) => {
               <CurrentView>
                 <CurrentAir />
                 <CurrentVirus />
-                <CurrentDust />
+                {!weather ? <LoadingDust>날씨 못 불러옵니다</LoadingDust> : <CurrentDust forecast={weather} />}
               </CurrentView>
             </Summary>
           </Contents>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled, { css } from '@emotion/native';
 
 const VirusInfo = styled.View({
+  paddingVertical: 10,
   justifyContent: 'flex-start',
   flexDirection: 'row',
 });

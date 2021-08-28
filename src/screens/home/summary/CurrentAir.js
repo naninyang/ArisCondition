@@ -5,7 +5,6 @@ import styled, { css } from '@emotion/native';
 const AirInfo = styled.View({
   justifyContent: 'flex-start',
   flexDirection: 'row',
-  paddingVertical: 10,
 });
 
 const CurrentAirWrapper = styled.View({

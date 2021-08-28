@@ -1,8 +1,11 @@
 import * as React from 'react';
+import { isSameDay } from 'date-fns';
 import styled, { css } from '@emotion/native';
 
+import weatherMain from '../../../constants/weatherMain.js';
+import weatherDescription from '../../../constants/weatherDescription.js';
+
 const DustInfo = styled.View({
-  paddingVertical: 10,
   justifyContent: 'flex-start',
   flexDirection: 'row',
 });
@@ -10,11 +13,27 @@ const DustInfo = styled.View({
 const CurrentDustWrapper = styled.View({
   padding: 20,
   backgroundColor: '#FFFFFF',
+});
+
+const WeatherWrapper = styled.View({
   flexDirection: 'row',
+  marginBottom: 10,
+});
+
+const TextWrapper = styled.View();
+
+const DustMark = styled.View({
+  position: 'absolute',
+  bottom: 0,
+  right: 0,
+  left: 0,
+  height: 12,
+  backgroundColor: 'pink',
 });
 
 const SmallIcon = styled.Text({
   paddingTop: 2,
+  paddingRight: 10,
   fontFamily: 'Pe-icon-7-weather',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
@@ -22,34 +41,23 @@ const SmallIcon = styled.Text({
 });
 
 const Dust = styled.Text({
-  paddingRight: 10,
-  paddingLeft: 10,
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 20,
   color: '#000000',
 });
 
 const Temp = styled.Text({
+  paddingLeft: 10,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
   color: 'orange',
 });
 
-const CurrentCondition = styled.View({
-  justifyContent: 'flex-start',
-  flexDirection: 'row',
-});
-
-const CurrentConditionWrapper = styled.View({
-  padding: 20,
-  backgroundColor: '#FFFFFF',
-  flexDirection: 'row',
-});
-
 const ConditionDescription = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
-  fontSize: 20,
+  fontSize: 18,
+  // TO-DO: 날씨 컨디션에 따라 code 값 나오기 처리하기
   color: '#000000',
 });
 
@@ -69,26 +77,34 @@ const LargeIcon = styled.Text({
   color: '#FFFFFF',
 });
 
-const CurrentDust = () => {
+const CurrentDust = ({ forecast: { list, timezone } }) => {
+  const currentWeather = list.filter((day) => {
+    const now = new Date().getTime() + Math.abs(timezone * 1000);
+    const currentDate = new Date(day.dt * 1000);
+    return isSameDay(now, currentDate);
+  });
+
   return (
-    <>
-      <DustInfo>
-        <CurrentDustWrapper>
-          {/* TODO: 날씨 상태, 기온 JSON 받아오기 */}
-          <SmallIcon>&#xe60c;</SmallIcon>
-          <Dust>맑음</Dust>
-          <Temp>27°C</Temp>
-        </CurrentDustWrapper>
-      </DustInfo>
-      <CurrentCondition>
-        <CurrentConditionWrapper>
-          {/* TODO: 날씨 메시지 JSON 받아오기 */}
-          <ConditionDescription>양산 쓰고 다니세요</ConditionDescription>
-        </CurrentConditionWrapper>
-      </CurrentCondition>
-      {/* TODO: 날씨 컨디션에 따라 code 값 나오기 처리하기 */}
-      <DustIconView><LargeIcon>&#xe60c;</LargeIcon></DustIconView>
-    </>
+    currentWeather.length > 0 && (
+      <>
+        <DustInfo>
+          <CurrentDustWrapper>
+            <WeatherWrapper>
+              {/* TODO: 날씨 상태, 기온 JSON 받아오기 */}
+              <SmallIcon>&#xe60c;</SmallIcon>
+              <TextWrapper>
+                <DustMark />
+                <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
+              </TextWrapper>
+              <Temp>{Math.round(currentWeather[0].main.temp)}°C</Temp>
+            </WeatherWrapper>
+            <ConditionDescription>{weatherDescription[currentWeather[0].weather[0].id]}</ConditionDescription>
+          </CurrentDustWrapper>
+        </DustInfo>
+        {/* TODO: 날씨 컨디션에 따라 code 값 나오기 처리하기 */}
+        <DustIconView><LargeIcon>&#xe60c;</LargeIcon></DustIconView>
+      </>
+    )
   )
 };
 
