@@ -44,16 +44,23 @@ const CoronicLevel = styled.Text({
 const API_URL = 'https://api.corona-19.kr/korea/country/new/';
 const API_KEY = 'DTaPkp9GZRn3cAvrmJCgEIH2uVK1Odqt5';
 
+const DISTANCING = 'https://naninyang.github.io/api/VirusDistancing.json'
+
 function CurrentVirus() {
   const [coronic, setCoronic] = React.useState(null);
+  const [distance, setDistance] = React.useState(null);
 
   React.useEffect(() => {
     axios.get(`${API_URL}?serviceKey=${API_KEY}`).then((response) => {
       setCoronic(response.data);
     });
+    axios.get(`${DISTANCING}`).then((response) => {
+      setDistance(response.data);
+    });
   }, []);
 
   if (!coronic) return null;
+  if (!distance) return null;
 
   return (
     <VirusInfo>
@@ -74,10 +81,10 @@ function CurrentVirus() {
           </TextWrapper>
         </CoronicWrapper>
         <CoronicLevel>
-          수도권 거리두기 4단계
+          수도권 거리두기 {distance.metropolitan}단계
         </CoronicLevel>
         <CoronicLevel>
-          비수도권 거리두기 3단계
+          비수도권 거리두기 {distance.other}단계
         </CoronicLevel>
       </CurrentVirusWrapper>
     </VirusInfo>
