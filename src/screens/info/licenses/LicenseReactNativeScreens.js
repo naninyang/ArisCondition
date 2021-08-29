@@ -43,7 +43,7 @@ const Contents = styled.ScrollView({
 });
 
 const Code = styled.Text({
-  fontFamily: 'FiraCode-Regular',
+  fontFamily: 'aris-condition-icons',
   fontSize: 14,
   color: '#FFFFFF',
 });

@@ -34,7 +34,7 @@ const DustMark = styled.View({
 const SmallIcon = styled.Text({
   paddingTop: 2,
   paddingRight: 10,
-  fontFamily: 'Pe-icon-7-weather',
+  fontFamily: 'aris-condition-icons',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
   color: 'orange',
@@ -72,7 +72,7 @@ const DustIconView = styled.View({
 });
 
 const LargeIcon = styled.Text({
-  fontFamily: 'Pe-icon-7-weather',
+  fontFamily: 'aris-condition-icons',
   fontSize: 320,
   color: '#FFFFFF',
 });
