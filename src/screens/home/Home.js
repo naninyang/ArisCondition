@@ -20,12 +20,10 @@ else screenHeight = Dimensions.get('window').height;
 
 const StatusGradient = styled.SafeAreaView({
   flex: 0,
-  backgroundColor: '#FF4E50',
 });
 
 const Container = styled.SafeAreaView({
   flex: 1,
-  backgroundColor: '#F9D423',
 });
 
 const Backgrounds = styled(LinearGradient)({
@@ -72,10 +70,10 @@ const Home = ({ navigation, route }) => {
   return (
     <>
       <StatusBar hidden={true} />
-      <StatusGradient></StatusGradient>
-      <Container>
+      <StatusGradient style={{ backgroundColor: '#019ddd' }}></StatusGradient>
+      <Container style={{ backgroundColor: '#52C2CD' }}>
         {/* TODO: 날씨 컨디션에 따라 LinearGradient 컬러값 나오기 처리하기 */}
-        <Backgrounds colors={['#FF4E50', '#F9D423']}>
+        <Backgrounds colors={['#019ddd', '#52C2CD']}>
           <Contents contentContainerStyle='flex:1'>
             <Summary>
               <Header>

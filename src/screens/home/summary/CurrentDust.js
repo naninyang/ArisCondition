@@ -29,7 +29,7 @@ const DustMark = styled.View({
   right: 0,
   left: 0,
   height: 12,
-  backgroundColor: 'pink',
+  backgroundColor: '#019DDD',
 });
 
 const SmallIcon = styled.Text({
@@ -38,7 +38,7 @@ const SmallIcon = styled.Text({
   fontFamily: 'aris-condition-icons',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
-  color: 'orange',
+  color: '#019DDD',
 });
 
 const Dust = styled.Text({
@@ -52,7 +52,7 @@ const Temp = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
   // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
-  color: 'orange',
+  color: '#019DDD',
 });
 
 const ConditionDescription = styled.Text({
@@ -91,7 +91,6 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
         <DustInfo>
           <CurrentDustWrapper>
             <WeatherWrapper>
-              {/* TODO: 날씨 상태, 기온 JSON 받아오기 */}
               <SmallIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</SmallIcon>
               <TextWrapper>
                 <DustMark />
@@ -102,7 +101,6 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
             <ConditionDescription>{weatherDescription[currentWeather[0].weather[0].id]}</ConditionDescription>
           </CurrentDustWrapper>
         </DustInfo>
-        {/* TODO: 날씨 컨디션에 따라 code 값 나오기 처리하기 */}
         <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
       </>
     )
