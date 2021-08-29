@@ -87,7 +87,7 @@ const Home = ({ navigation, route }) => {
               <CurrentView>
                 <CurrentAir />
                 <CurrentVirus />
-                {!weather ? <LoadingDust>날씨 못 불러옵니다</LoadingDust> : <CurrentDust forecast={weather} />}
+                {!weather ? <LoadingDust /> : <CurrentDust forecast={weather} />}
               </CurrentView>
             </Summary>
           </Contents>

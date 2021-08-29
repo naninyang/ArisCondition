@@ -91,7 +91,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
           <CurrentDustWrapper>
             <WeatherWrapper>
               {/* TODO: 날씨 상태, 기온 JSON 받아오기 */}
-              <SmallIcon>&#xe60c;</SmallIcon>
+              <SmallIcon>&#xec00;</SmallIcon>
               <TextWrapper>
                 <DustMark />
                 <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
@@ -102,7 +102,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
           </CurrentDustWrapper>
         </DustInfo>
         {/* TODO: 날씨 컨디션에 따라 code 값 나오기 처리하기 */}
-        <DustIconView><LargeIcon>&#xe60c;</LargeIcon></DustIconView>
+        <DustIconView><LargeIcon>&#xec00;</LargeIcon></DustIconView>
       </>
     )
   )
