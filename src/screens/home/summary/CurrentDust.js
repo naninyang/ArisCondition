@@ -2,6 +2,7 @@ import * as React from 'react';
 import { isSameDay } from 'date-fns';
 import styled, { css } from '@emotion/native';
 
+import weatherIcon from '../../../constants/weatherIcon.js';
 import weatherMain from '../../../constants/weatherMain.js';
 import weatherDescription from '../../../constants/weatherDescription.js';
 
@@ -62,8 +63,8 @@ const ConditionDescription = styled.Text({
 });
 
 const DustIconView = styled.View({
-  width: 170,
-  height: 170,
+  width: 200,
+  height: 200,
   position: 'absolute',
   bottom: 0,
   right: 0,
@@ -91,7 +92,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
           <CurrentDustWrapper>
             <WeatherWrapper>
               {/* TODO: 날씨 상태, 기온 JSON 받아오기 */}
-              <SmallIcon>&#xec00;</SmallIcon>
+              <SmallIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</SmallIcon>
               <TextWrapper>
                 <DustMark />
                 <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
@@ -102,7 +103,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
           </CurrentDustWrapper>
         </DustInfo>
         {/* TODO: 날씨 컨디션에 따라 code 값 나오기 처리하기 */}
-        <DustIconView><LargeIcon>&#xec00;</LargeIcon></DustIconView>
+        <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
       </>
     )
   )
