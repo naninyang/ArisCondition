@@ -26,12 +26,12 @@ const AirSummary = styled.Text({
   paddingRight: 10,
 });
 
-const AriIcon = styled.Text({
+const AirIcon = styled.Text({
   paddingRight: 10,
   fontFamily: 'aris-condition-icons',
   fontSize: 20,
   color: '#000000',
-})
+});
 
 const AirText = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
@@ -87,7 +87,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb00;</AriIcon>
+                          <AirIcon>&#xeb00;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -106,7 +106,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb01;</AriIcon>
+                          <AirIcon>&#xeb01;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -125,7 +125,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb02;</AriIcon>
+                          <AirIcon>&#xeb02;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -144,7 +144,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb03;</AriIcon>
+                          <AirIcon>&#xeb03;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -163,7 +163,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb10;</AriIcon>
+                          <AirIcon>&#xeb10;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -182,7 +182,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb11;</AriIcon>
+                          <AirIcon>&#xeb11;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -201,7 +201,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb12;</AriIcon>
+                          <AirIcon>&#xeb12;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -220,7 +220,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb13;</AriIcon>
+                          <AirIcon>&#xeb13;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -248,7 +248,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb00;</AriIcon>
+                          <AirIcon>&#xeb00;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -267,7 +267,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb01;</AriIcon>
+                          <AirIcon>&#xeb01;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -286,7 +286,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb02;</AriIcon>
+                          <AirIcon>&#xeb02;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -305,7 +305,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb03;</AriIcon>
+                          <AirIcon>&#xeb03;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -324,7 +324,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb10;</AriIcon>
+                          <AirIcon>&#xeb10;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -343,7 +343,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb11;</AriIcon>
+                          <AirIcon>&#xeb11;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -362,7 +362,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb12;</AriIcon>
+                          <AirIcon>&#xeb12;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -381,7 +381,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AriIcon>&#xeb13;</AriIcon>
+                          <AirIcon>&#xeb13;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}

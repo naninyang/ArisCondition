@@ -18,7 +18,16 @@ const CoronicWrapper = styled.View({
   marginBottom: 5,
 })
 
-const TextWrapper = styled.View();
+const TextWrapper = styled.View({
+  flexDirection: 'row',
+});
+
+const CoronicIcon = styled.Text({
+  paddingRight: 10,
+  fontFamily: 'aris-condition-icons',
+  fontSize: 20,
+  color: '#000000',
+});
 
 const CoronicMark = styled.View({
   position: 'absolute',
@@ -67,25 +76,19 @@ function CurrentVirus() {
       <CurrentVirusWrapper>
         <CoronicWrapper>
           <TextWrapper>
+            <CoronicIcon>&#xea00;</CoronicIcon>
             <Coronic>
-              {/* TODO: 수도권 사회적거리두기 단계 표기 */}
               확진자
               {' '}
             </Coronic>
           </TextWrapper>
           <TextWrapper>
             <CoronicMark />
-            <Coronic>
-              {coronic.korea.newCase}명
-            </Coronic>
+            <Coronic>{coronic.korea.newCase}명</Coronic>
           </TextWrapper>
         </CoronicWrapper>
-        <CoronicLevel>
-          수도권 거리두기 {distance.metropolitan}단계
-        </CoronicLevel>
-        <CoronicLevel>
-          비수도권 거리두기 {distance.other}단계
-        </CoronicLevel>
+        <CoronicLevel>수도권 거리두기 {distance.metropolitan}단계</CoronicLevel>
+        <CoronicLevel>비수도권 거리두기 {distance.other}단계</CoronicLevel>
       </CurrentVirusWrapper>
     </VirusInfo>
   );
