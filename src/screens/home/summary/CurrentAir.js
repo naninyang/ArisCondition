@@ -10,7 +10,7 @@ const AirInfo = styled.View({
 const CurrentAirWrapper = styled.View({
   paddingHorizontal: 20,
   paddingTop: 18,
-  paddingBottom: 16,
+  paddingBottom: 14,
   backgroundColor: '#FFFFFF',
   flexDirection: 'column',
 });
@@ -50,14 +50,14 @@ const AirMark = styled.View({
   right: 0,
   left: 0,
   height: 12,
-  backgroundColor: 'pink',
+  opacity: .5,
 });
 
 const AirData = styled.Text({
   marginTop: -2,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
-  color: 'orange',
+  color: '#000000',
 });
 
 const API_URL = 'https://api.waqi.info/feed/geo:37.5576695;126.95906/';
@@ -94,7 +94,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#FFEA00' }} />
                           <AirText>
                             최고
                           </AirText>
@@ -113,7 +113,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#00E676' }} />
                           <AirText>
                             좋음
                           </AirText>
@@ -132,7 +132,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#1DE9B6' }} />
                           <AirText>
                             양호
                           </AirText>
@@ -151,7 +151,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#00B0FF' }} />
                           <AirText>
                             보통
                           </AirText>
@@ -170,7 +170,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#651FFF' }} />
                           <AirText>
                             나쁨
                           </AirText>
@@ -189,7 +189,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#AA00FF' }} />
                           <AirText>
                             상당히 나쁨
                           </AirText>
@@ -208,7 +208,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#C51162' }} />
                           <AirText>
                             매우 나쁨
                           </AirText>
@@ -227,7 +227,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#FF1744' }} />
                           <AirText>
                             최악
                           </AirText>
@@ -255,7 +255,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#FFEA00' }} />
                           <AirText>
                             최고
                           </AirText>
@@ -274,7 +274,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#00E676' }} />
                           <AirText>
                             좋음
                           </AirText>
@@ -293,7 +293,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#1DE9B6' }} />
                           <AirText>
                             양호
                           </AirText>
@@ -312,7 +312,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#00B0FF' }} />
                           <AirText>
                             보통
                           </AirText>
@@ -331,7 +331,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#651FFF' }} />
                           <AirText>
                             나쁨
                           </AirText>
@@ -350,7 +350,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#AA00FF' }} />
                           <AirText>
                             상당히 나쁨
                           </AirText>
@@ -369,7 +369,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#C51162' }} />
                           <AirText>
                             매우 나쁨
                           </AirText>
@@ -388,7 +388,7 @@ function CurrentAir() {
                           </AirText>
                         </TextWrapper>
                         <TextWrapper>
-                          <AirMark />
+                          <AirMark style={{ backgroundColor: '#FF1744' }} />
                           <AirText>
                             최악
                           </AirText>

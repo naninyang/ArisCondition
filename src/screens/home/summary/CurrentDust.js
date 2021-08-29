@@ -30,6 +30,7 @@ const DustMark = styled.View({
   left: 0,
   height: 12,
   backgroundColor: '#019DDD',
+  opacity: .5,
 });
 
 const SmallIcon = styled.Text({
