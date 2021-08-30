@@ -1,4 +1,5 @@
 import * as React from 'react';
+import uuid from 'react-native-uuid';
 import styled, { css } from '@emotion/native';
 
 const Container = styled.SafeAreaView({
@@ -76,12 +77,12 @@ const LabelBullet = styled.Text({
 
 const InfoItem = [
   {
-    id: '1',
+    id: uuid.v4(),
     title: '공기질 데이터',
     link: 'dataAqp',
   },
   {
-    id: '2',
+    id: uuid.v4(),
     title: '바이러스 확진자 데이터',
     link: 'dataVirus',
   },

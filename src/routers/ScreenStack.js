@@ -16,9 +16,6 @@ import LicenseReactNativeSafeAreaContext from '../screens/info/licenses/LicenseR
 import LicenseReactNativeScreens from '../screens/info/licenses/LicenseReactNativeScreens';
 
 import Apis from '../screens/info/apis/Apis';
-import ApiVworld from '../screens/info/apis/ApiVworld';
-import ApiAqp from '../screens/info/apis/ApiAqp';
-import ApiVirus from '../screens/info/apis/ApiVirus';
 
 import Datas from '../screens/info/datas/Datas';
 import DataAqp from '../screens/info/datas/DataAqp';
@@ -77,18 +74,6 @@ function ScreenStack() {
       <HomeStack.Screen
         name='apis'
         component={Apis}
-      />
-      <HomeStack.Screen
-        name='apiVworld'
-        component={ApiVworld}
-      />
-      <HomeStack.Screen
-        name='apiAqp'
-        component={ApiAqp}
-      />
-      <HomeStack.Screen
-        name='apiVirus'
-        component={ApiVirus}
       />
 
       <HomeStack.Screen

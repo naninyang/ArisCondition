@@ -1,5 +1,6 @@
 import React, { useState, } from 'react';
 import axios from 'axios';
+import { API_URL_ADDRESS, API_KEY_ADDRESS } from "@env";
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import styled, { css } from '@emotion/native';
@@ -21,12 +22,9 @@ const Location = () => {
   const currentTime = format(new Date().getTime(), "h:mm a");
   const [address, setAddress] = useState([]);
 
-  const API_URL = 'https://api.vworld.kr/req/address';
-  const API_KEY = '18C657E2-D781-3799-8626-496EDE6DCF70';
-
-  axios.get(API_URL, {
+  axios.get(API_URL_ADDRESS, {
     params: {
-      key: API_KEY,
+      key: API_KEY_ADDRESS,
       service: 'address',
       request: 'GetAddress',
       // TO-DO: GeoLocation 사용해서 point 불러오기

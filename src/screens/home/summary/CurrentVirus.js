@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL_VIRUS, API_KEY_VIRUS, API_URL_DISTANCING } from "@env";
 import styled, { css } from '@emotion/native';
 
 const VirusInfo = styled.View({
@@ -51,22 +52,17 @@ const CoronicLevel = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 18,
   color: '#FF1744',
-})
-
-const API_URL = 'https://api.corona-19.kr/korea/country/new/';
-const API_KEY = 'DTaPkp9GZRn3cAvrmJCgEIH2uVK1Odqt5';
-
-const DISTANCING = 'https://naninyang.github.io/api/VirusDistancing.json'
+});
 
 function CurrentVirus() {
   const [coronic, setCoronic] = React.useState(null);
   const [distance, setDistance] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`${API_URL}?serviceKey=${API_KEY}`).then((response) => {
+    axios.get(`${API_URL_VIRUS}?serviceKey=${API_KEY_VIRUS}`).then((response) => {
       setCoronic(response.data);
     });
-    axios.get(`${DISTANCING}`).then((response) => {
+    axios.get(`${API_URL_DISTANCING}`).then((response) => {
       setDistance(response.data);
     });
   }, []);

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import uuid from 'react-native-uuid';
 import styled, { css } from '@emotion/native';
 
 const Container = styled.SafeAreaView({
@@ -78,32 +79,32 @@ const LabelBullet = styled.Text({
 // TO-DO: Fonts Licenses List
 const InfoItem = [
   {
-    id: '1',
+    id: uuid.v4(),
     title: 'React',
     link: 'licenseReact',
   },
   {
-    id: '2',
+    id: uuid.v4(),
     title: 'React Native',
     link: 'licenseReactNative',
   },
   {
-    id: '3',
+    id: uuid.v4(),
     title: 'React Native Gesture Handler',
     link: 'licenseReactNativeGestureHandler',
   },
   {
-    id: '4',
+    id: uuid.v4(),
     title: 'react-native-linear-gradient',
     link: 'licenseReactNativeLinearGradient',
   },
   {
-    id: '5',
+    id: uuid.v4(),
     title: 'react-native-safe-area-context',
     link: 'licenseReactNativeSafeAreaContext',
   },
   {
-    id: '6',
+    id: uuid.v4(),
     title: 'React Native Screens',
     link: 'licenseReactNativeScreens',
   },

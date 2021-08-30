@@ -39,29 +39,58 @@ $ npx react-native run-android
 
 ## APIs
 ### Vworld Geocoder API 2.0
-* **서비스 URL:**
+* **서비스 URL:**  
 https://www.vworld.kr
 * **가입 후 Key 신청**
-* **API 문서:**
+* **API 문서:**  
 https://www.vworld.kr/dev/v4dv_geocoderguide2_s002.do
+* **사용중인 API:**  
+https://api.vworld.kr/req/address
 
 ### Air Quality Programmatic APIs
-* **서비스 URL:**
+* **서비스 URL:**  
 https://aqicn.org/api
-* **API Key 신청 URL:**
+* **API Key 신청 URL:**  
 https://aqicn.org/data-platform/token/#/
-* **API 문서:**
+* **API 문서:**  
 https://aqicn.org/json-api/doc
-* **사용중인 API:**
+* **사용중인 API:**  
 https://api.waqi.info/feed/geo
 
 ### Goodbye-corona API
-* **서비스 URL:**
+* **서비스 URL:**  
 https://api.corona-19.kr
 * **Key 신청 후 신청한 이메일 확인**
-* **API 문서:**
+* **API 문서:**  
 https://github.com/dhlife09/Corona-19-API
-* **사용중인 API:**
-https://api.corona-19.kr/korea/country/new
+* **사용중인 API:**  
+https://api.corona-19.kr/korea/country/new/  
+https://naninyang.github.io/api/VirusDistancing.json
 
-API Key는 개발자 개인이 신청하여 발급받은 Key를 로컬에 세팅하여 개발하여야 합니다.
+### Open Weather Map API
+* **서비스 URL:**  
+https://openweathermap.org
+* **가입 후 Key 신청**
+* **API 문서:**  
+https://openweathermap.org/api
+* **서비스 URL:**  
+https://api.openweathermap.org/data/2.5
+
+API Key는 개발자 개인이 신청하여 발급받은 Key를 로컬의 프로젝트 루트 디렉토리에 .env 파일을 생성하여 관리해야 합니다.
+
+## dotenv (.env)
+```text
+API_URL_WEATHER=https://api.openweathermap.org/data/2.5
+API_KEY_WEATHER=신청한 키 입력
+API_LOCALE_WEATHER=kr
+
+API_URL_VIRUS=https://api.corona-19.kr/korea/country/new/
+API_KEY_VIRUS=신청한 키 입력
+API_URL_DISTANCING=https://naninyang.github.io/api/VirusDistancing.json
+
+API_URL_AIR=https://api.waqi.info/feed/geo
+API_KEY_AIR=신청한 키 입력
+
+API_URL_ADDRESS=https://api.vworld.kr/req/address
+API_KEY_ADDRESS=신청한 키 입력
+```

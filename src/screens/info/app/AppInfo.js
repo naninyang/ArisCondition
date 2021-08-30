@@ -50,6 +50,7 @@ const AppNameKorean = styled.Text({
 
 const AppNameEnglish = styled.Text({
   marginTop: 5,
+  marginBottom: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
   color: '#FFFFFF',
@@ -57,7 +58,7 @@ const AppNameEnglish = styled.Text({
 
 const Copyright = styled.View({
   flexDirection: 'row',
-  marginTop: 20,
+  marginVertical: 2,
 });
 
 const TextBold = styled.Text({
@@ -94,6 +95,9 @@ function AppInfo({ navigation, route }) {
             {' '}
           </TextBold>
           <TextRegular>All Rights Resevered.</TextRegular>
+        </Copyright>
+        <Copyright>
+          <TextBold>Thanks to code contributors!</TextBold>
         </Copyright>
       </Contents>
     </Container>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_KEY_AIR, API_URL_AIR } from "@env";
 import styled, { css } from '@emotion/native';
 
 const AirInfo = styled.View({
@@ -60,14 +61,12 @@ const AirData = styled.Text({
   color: '#000000',
 });
 
-const API_URL = 'https://api.waqi.info/feed/geo:37.5576695;126.95906/';
-const API_KEY = '44c176891ebfbf99df09758fc4060341f157c878';
-
 function CurrentAir() {
   const [aqi, setAqi] = React.useState(null);
+  const point = `37.5576695;126.95906`;
 
   React.useEffect(() => {
-    axios.get(`${API_URL}?token=${API_KEY}`).then((response) => {
+    axios.get(`${API_URL_AIR}:${point}/?token=${API_KEY_AIR}`).then((response) => {
       setAqi(response.data);
     });
   }, []);
