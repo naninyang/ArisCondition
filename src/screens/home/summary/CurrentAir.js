@@ -61,6 +61,15 @@ const AirData = styled.Text({
   color: '#000000',
 });
 
+const AirConditionWrapper = styled.View({
+  flexDirection: 'row',
+});
+
+const AirConditionDesction = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Bold',
+  fontSize: 18,
+});
+
 function CurrentAir() {
   const [aqi, setAqi] = React.useState(null);
   const point = `37.5576695;126.95906`;
@@ -519,6 +528,26 @@ function CurrentAir() {
             }
           </AirDescription>
         </AirInfoWrapper>
+        <AirConditionWrapper>
+          {
+            (() => {
+              if (aqi.data.iaqi.pm10.v > 75 || aqi.data.iaqi.pm25.v > 37) {
+                return (
+                  <AirConditionDesction style={{ color: '#FF1744' }}>
+                    출근은 해로워요
+                  </AirConditionDesction>
+                )
+              }
+              else {
+                return (
+                  <AirConditionDesction style={{ color: '#F57F17' }}>
+                    맑은 공기 많이 마셔요
+                  </AirConditionDesction>
+                )
+              }
+            })()
+          }
+        </AirConditionWrapper>
       </CurrentAirWrapper>
     </AirInfo>
   )

@@ -61,9 +61,6 @@ const CurrentView = styled.View({
   flex: 1,
 });
 
-const Text = styled.Text({
-})
-
 const Home = ({ navigation, route }) => {
   const weather = useWeather();
 

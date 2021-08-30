@@ -19,6 +19,7 @@ const CurrentDustWrapper = styled.View({
 
 const WeatherWrapper = styled.View({
   flexDirection: 'row',
+  alignItems: 'center',
   marginBottom: 10,
 });
 
@@ -46,10 +47,17 @@ const Dust = styled.Text({
   color: '#000000',
 });
 
-const Temp = styled.Text({
+const TempCurrent = styled.Text({
   paddingLeft: 10,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
+});
+
+const TempToday = styled.Text({
+  opacity: .7,
+  paddingLeft: 10,
+  fontFamily: 'SpoqaHanSansNeo-Bold',
+  fontSize: 14,
 });
 
 const ConditionDescription = styled.Text({
@@ -97,11 +105,18 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
                 />
                 <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
               </TextWrapper>
-              <Temp
+              <TempCurrent
                 style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
               >
                 {Math.round(currentWeather[0].main.temp)}°C
-              </Temp>
+              </TempCurrent>
+              <TempToday
+                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+              >
+                {Math.round(currentWeather[0].main.temp_max)}°C
+                {' | '}
+                {Math.round(currentWeather[0].main.temp_min)}°C
+              </TempToday>
             </WeatherWrapper>
             <ConditionDescription
               style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
