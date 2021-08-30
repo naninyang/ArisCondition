@@ -2,9 +2,10 @@ import * as React from 'react';
 import { isSameDay } from 'date-fns';
 import styled, { css } from '@emotion/native';
 
+import weatherDescription from '../../../constants/weatherDescription.js';
+import weatherGradient from '../../../constants/weatherGradient.js';
 import weatherIcon from '../../../constants/weatherIcon.js';
 import weatherMain from '../../../constants/weatherMain.js';
-import weatherDescription from '../../../constants/weatherDescription.js';
 
 const DustInfo = styled.View({
   justifyContent: 'flex-start',
@@ -29,7 +30,6 @@ const DustMark = styled.View({
   right: 0,
   left: 0,
   height: 12,
-  backgroundColor: '#019DDD',
   opacity: .5,
 });
 
@@ -38,8 +38,6 @@ const SmallIcon = styled.Text({
   paddingRight: 10,
   fontFamily: 'aris-condition-icons',
   fontSize: 20,
-  // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
-  color: '#019DDD',
 });
 
 const Dust = styled.Text({
@@ -52,15 +50,11 @@ const Temp = styled.Text({
   paddingLeft: 10,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 20,
-  // TODO: 날씨 컨디션에 따라 color 값 나오기 처리하기
-  color: '#019DDD',
 });
 
 const ConditionDescription = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 18,
-  // TO-DO: 날씨 컨디션에 따라 code 값 나오기 처리하기
-  color: '#000000',
 });
 
 const DustIconView = styled.View({
@@ -92,14 +86,28 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
         <DustInfo>
           <CurrentDustWrapper>
             <WeatherWrapper>
-              <SmallIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</SmallIcon>
+              <SmallIcon
+                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
+              >
+                {weatherIcon[currentWeather[0].weather[0].icon]}
+              </SmallIcon>
               <TextWrapper>
-                <DustMark />
+                <DustMark
+                  style={{ backgroundColor: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+                />
                 <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
               </TextWrapper>
-              <Temp>{Math.round(currentWeather[0].main.temp)}°C</Temp>
+              <Temp
+                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
+              >
+                {Math.round(currentWeather[0].main.temp)}°C
+              </Temp>
             </WeatherWrapper>
-            <ConditionDescription>{weatherDescription[currentWeather[0].weather[0].id]}</ConditionDescription>
+            <ConditionDescription
+              style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+            >
+              {weatherDescription[currentWeather[0].weather[0].id]}
+            </ConditionDescription>
           </CurrentDustWrapper>
         </DustInfo>
         <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
