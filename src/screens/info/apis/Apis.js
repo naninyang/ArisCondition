@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled, { css } from '@emotion/native';
-import { forHorizontalIOS } from '@react-navigation/stack/lib/typescript/src/TransitionConfigs/CardStyleInterpolators';
 
 const Container = styled.SafeAreaView({
   flex: 1,

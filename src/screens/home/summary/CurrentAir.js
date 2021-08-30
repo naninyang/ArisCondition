@@ -215,7 +215,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v > 150) {
+                  else {
                     return (
                       <>
                         <TextWrapper>
@@ -237,13 +237,72 @@ function CurrentAir() {
                 })()
               }
             </AirSummary>
-            <AirData>{aqi.data.iaqi.pm10.v}㎍/㎥</AirData>
+            {
+              (() => {
+                if (aqi.data.iaqi.pm10.v < 16) {
+                  return (
+                    <AirData style={{ color: '#F57F17' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 31) {
+                  return (
+                    <AirData style={{ color: '#2E7D32' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 41) {
+                  return (
+                    <AirData style={{ color: '#006064' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 51) {
+                  return (
+                    <AirData style={{ color: '#2962FF' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 76) {
+                  return (
+                    <AirData style={{ color: '#651FFF' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 101) {
+                  return (
+                    <AirData style={{ color: '#AA00FF' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm10.v < 151) {
+                  return (
+                    <AirData style={{ color: '#C51162' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else {
+                  return (
+                    <AirData style={{ color: '#FF1744' }}>
+                      {aqi.data.iaqi.pm10.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+              })()
+            }
           </AirDescription>
           <AirDescription>
             <AirSummary>
               {
                 (() => {
-                  if (aqi.data.iaqi.pm10.v < 9) {
+                  if (aqi.data.iaqi.pm25.v < 9) {
                     return (
                       <>
                         <TextWrapper>
@@ -262,7 +321,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 16) {
+                  else if (aqi.data.iaqi.pm25.v < 16) {
                     return (
                       <>
                         <TextWrapper>
@@ -281,7 +340,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 21) {
+                  else if (aqi.data.iaqi.pm25.v < 21) {
                     return (
                       <>
                         <TextWrapper>
@@ -300,7 +359,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 26) {
+                  else if (aqi.data.iaqi.pm25.v < 26) {
                     return (
                       <>
                         <TextWrapper>
@@ -319,7 +378,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 38) {
+                  else if (aqi.data.iaqi.pm25.v < 38) {
                     return (
                       <>
                         <TextWrapper>
@@ -338,7 +397,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 51) {
+                  else if (aqi.data.iaqi.pm25.v < 51) {
                     return (
                       <>
                         <TextWrapper>
@@ -357,7 +416,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v < 76) {
+                  else if (aqi.data.iaqi.pm25.v < 76) {
                     return (
                       <>
                         <TextWrapper>
@@ -376,7 +435,7 @@ function CurrentAir() {
                       </>
                     )
                   }
-                  else if (aqi.data.iaqi.pm10.v > 75) {
+                  else {
                     return (
                       <>
                         <TextWrapper>
@@ -398,7 +457,66 @@ function CurrentAir() {
                 })()
               }
             </AirSummary>
-            <AirData>{aqi.data.iaqi.pm25.v}㎍/㎥</AirData>
+            {
+              (() => {
+                if (aqi.data.iaqi.pm25.v < 9) {
+                  return (
+                    <AirData style={{ color: '#F57F17' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 16) {
+                  return (
+                    <AirData style={{ color: '#2E7D32' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 21) {
+                  return (
+                    <AirData style={{ color: '#006064' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 26) {
+                  return (
+                    <AirData style={{ color: '#2962FF' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 38) {
+                  return (
+                    <AirData style={{ color: '#651FFF' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 51) {
+                  return (
+                    <AirData style={{ color: '#AA00FF' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else if (aqi.data.iaqi.pm25.v < 76) {
+                  return (
+                    <AirData style={{ color: '#C51162' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+                else {
+                  return (
+                    <AirData style={{ color: '#FF1744' }}>
+                      {aqi.data.iaqi.pm25.v}㎍/㎥
+                    </AirData>
+                  )
+                }
+              })()
+            }
           </AirDescription>
         </AirInfoWrapper>
       </CurrentAirWrapper>
