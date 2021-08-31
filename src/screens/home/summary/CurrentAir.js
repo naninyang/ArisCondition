@@ -95,7 +95,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb00;</AirIcon>
+                          <AirIcon style={{ color: '#F57F17' }}>&#xeb00;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -103,9 +103,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#FFEA00' }} />
-                          <AirText>
-                            최고
-                          </AirText>
+                          <AirText>최고</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -114,7 +112,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb01;</AirIcon>
+                          <AirIcon style={{ color: '#2E7D32' }}>&#xeb01;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -122,9 +120,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#00E676' }} />
-                          <AirText>
-                            좋음
-                          </AirText>
+                          <AirText>좋음</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -133,7 +129,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb02;</AirIcon>
+                          <AirIcon style={{ color: '#006064' }}>&#xeb02;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -141,9 +137,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#1DE9B6' }} />
-                          <AirText>
-                            양호
-                          </AirText>
+                          <AirText>양호</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -152,7 +146,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb03;</AirIcon>
+                          <AirIcon style={{ color: '#2962FF' }}>&#xeb03;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -160,9 +154,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#00B0FF' }} />
-                          <AirText>
-                            보통
-                          </AirText>
+                          <AirText>보통</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -171,7 +163,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb10;</AirIcon>
+                          <AirIcon style={{ color: '#651FFF' }}>&#xeb10;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -179,9 +171,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#651FFF' }} />
-                          <AirText>
-                            나쁨
-                          </AirText>
+                          <AirText>나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -190,7 +180,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb11;</AirIcon>
+                          <AirIcon style={{ color: '#AA00FF' }}>&#xeb11;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -198,9 +188,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#AA00FF' }} />
-                          <AirText>
-                            상당히 나쁨
-                          </AirText>
+                          <AirText>상당히 나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -209,7 +197,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb12;</AirIcon>
+                          <AirIcon style={{ color: '#C51162' }}>&#xeb12;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -217,9 +205,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#C51162' }} />
-                          <AirText>
-                            매우 나쁨
-                          </AirText>
+                          <AirText>매우 나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -228,7 +214,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb13;</AirIcon>
+                          <AirIcon style={{ color: '#FF1744' }}>&#xeb13;</AirIcon>
                           <AirText>
                             미세먼지
                             {' '}
@@ -236,9 +222,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#FF1744' }} />
-                          <AirText>
-                            최악
-                          </AirText>
+                          <AirText>최악</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -315,7 +299,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb00;</AirIcon>
+                          <AirIcon style={{ color: '#F57F17' }}>&#xeb00;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -323,9 +307,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#FFEA00' }} />
-                          <AirText>
-                            최고
-                          </AirText>
+                          <AirText>최고</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -334,7 +316,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb01;</AirIcon>
+                          <AirIcon style={{ color: '#2E7D32' }}>&#xeb01;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -342,9 +324,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#00E676' }} />
-                          <AirText>
-                            좋음
-                          </AirText>
+                          <AirText>좋음</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -353,7 +333,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb02;</AirIcon>
+                          <AirIcon style={{ color: '#006064' }}>&#xeb02;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -361,9 +341,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#1DE9B6' }} />
-                          <AirText>
-                            양호
-                          </AirText>
+                          <AirText>양호</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -372,7 +350,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb03;</AirIcon>
+                          <AirIcon style={{ color: '#2962FF' }}>&#xeb03;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -380,9 +358,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#00B0FF' }} />
-                          <AirText>
-                            보통
-                          </AirText>
+                          <AirText>보통</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -391,7 +367,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb10;</AirIcon>
+                          <AirIcon style={{ color: '#651FFF' }}>&#xeb10;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -399,9 +375,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#651FFF' }} />
-                          <AirText>
-                            나쁨
-                          </AirText>
+                          <AirText>나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -410,7 +384,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb11;</AirIcon>
+                          <AirIcon style={{ color: '#AA00FF' }}>&#xeb11;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -418,9 +392,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#AA00FF' }} />
-                          <AirText>
-                            상당히 나쁨
-                          </AirText>
+                          <AirText>상당히 나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -429,7 +401,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb12;</AirIcon>
+                          <AirIcon style={{ color: '#C51162' }}>&#xeb12;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -437,9 +409,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#C51162' }} />
-                          <AirText>
-                            매우 나쁨
-                          </AirText>
+                          <AirText>매우 나쁨</AirText>
                         </TextWrapper>
                       </>
                     )
@@ -448,7 +418,7 @@ function CurrentAir() {
                     return (
                       <>
                         <TextWrapper>
-                          <AirIcon>&#xeb13;</AirIcon>
+                          <AirIcon style={{ color: '#FF1744' }}>&#xeb13;</AirIcon>
                           <AirText>
                             초미세먼지
                             {' '}
@@ -456,9 +426,7 @@ function CurrentAir() {
                         </TextWrapper>
                         <TextWrapper>
                           <AirMark style={{ backgroundColor: '#FF1744' }} />
-                          <AirText>
-                            최악
-                          </AirText>
+                          <AirText>최악</AirText>
                         </TextWrapper>
                       </>
                     )
