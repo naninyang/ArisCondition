@@ -10,7 +10,7 @@ const VirusInfo = styled.View({
 });
 
 const CurrentVirusWrapper = styled.View({
-  paddingHorizontal: 20,
+  paddingHorizontal: 30,
   paddingTop: 20,
   paddingBottom: 18,
   backgroundColor: '#FFFFFF',
@@ -19,7 +19,7 @@ const CurrentVirusWrapper = styled.View({
 const CoronicWrapper = styled.View({
   flexDirection: 'row',
   marginBottom: 5,
-})
+});
 
 const TextWrapper = styled.View({
   flexDirection: 'row',

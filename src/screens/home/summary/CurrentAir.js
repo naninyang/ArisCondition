@@ -9,7 +9,7 @@ const AirInfo = styled.View({
 });
 
 const CurrentAirWrapper = styled.View({
-  paddingHorizontal: 20,
+  paddingHorizontal: 30,
   paddingTop: 18,
   paddingBottom: 14,
   backgroundColor: '#FFFFFF',

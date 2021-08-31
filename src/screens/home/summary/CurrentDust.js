@@ -1,5 +1,9 @@
 import * as React from 'react';
 import { isSameDay } from 'date-fns';
+import { Dimensions } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
+import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
 
 import weatherDescription from '../../../constants/weatherDescription.js';
@@ -7,13 +11,61 @@ import weatherGradient from '../../../constants/weatherGradient.js';
 import weatherIcon from '../../../constants/weatherIcon.js';
 import weatherMain from '../../../constants/weatherMain.js';
 
+import Location from '../summary/Location';
+import CurrentAir from '../summary/CurrentAir';
+import CurrentVirus from '../summary/CurrentVirus';
+
+const status = getStatusBarHeight(true);
+if (isIphoneX()) {
+  screenHeight = Dimensions.get('window').height - status;
+  statusBarHeight = status;
+  bottomSpaceHeight = getBottomSpace();
+  radius = 45;
+  radiusHeight = statusBarHeight + 45;
+  radiusMinus = -45;
+}
+else {
+  screenHeight = Dimensions.get('window').height;
+  statusBarHeight = 0;
+  bottomSpaceHeight = 0;
+  radius = 0;
+  radiusHeight = 0;
+  radiusMinus = 0;
+}
+
+const StatusGradient = styled.View({
+  height: radiusHeight,
+  backgroundColor: '#FFFFFF',
+});
+
+const Backgrounds = styled(LinearGradient)({
+  width: '100%',
+  height: screenHeight,
+  borderTopLeftRadius: radius,
+  borderTopRightRadius: radius,
+  marginTop: radiusMinus,
+});
+
+const CurrentView = styled.View({
+  flex: 1,
+});
+
+const Header = styled.View({
+  justifyContent: 'space-between',
+  flexDirection: 'row',
+  paddingRight: 10,
+  paddingBottom: 60,
+  paddingLeft: 30,
+});
+
 const DustInfo = styled.View({
   justifyContent: 'flex-start',
   flexDirection: 'row',
 });
 
 const CurrentDustWrapper = styled.View({
-  padding: 20,
+  paddingVertical: 20,
+  paddingHorizontal: 30,
   backgroundColor: '#FFFFFF',
 });
 
@@ -91,41 +143,53 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
   return (
     currentWeather.length > 0 && (
       <>
-        <DustInfo>
-          <CurrentDustWrapper>
-            <WeatherWrapper>
-              <SmallIcon
-                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
-              >
-                {weatherIcon[currentWeather[0].weather[0].icon]}
-              </SmallIcon>
-              <TextWrapper>
-                <DustMark
-                  style={{ backgroundColor: weatherGradient[currentWeather[0].weather[0].icon][1] }}
-                />
-                <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
-              </TextWrapper>
-              <TempCurrent
-                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
-              >
-                {Math.round(currentWeather[0].main.temp)}°C
-              </TempCurrent>
-              <TempToday
-                style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
-              >
-                {Math.round(currentWeather[0].main.temp_max)}°C
-                {' | '}
-                {Math.round(currentWeather[0].main.temp_min)}°C
-              </TempToday>
-            </WeatherWrapper>
-            <ConditionDescription
-              style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
-            >
-              {weatherDescription[currentWeather[0].weather[0].id]}
-            </ConditionDescription>
-          </CurrentDustWrapper>
-        </DustInfo>
-        <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
+        <StatusGradient
+          style={{ backgroundColor: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+        />
+        <Backgrounds colors={weatherGradient[currentWeather[0].weather[0].icon]}>
+          <Header>
+            <Location />
+          </Header>
+          <CurrentView>
+            <CurrentAir />
+            <CurrentVirus />
+            <DustInfo>
+              <CurrentDustWrapper>
+                <WeatherWrapper>
+                  <SmallIcon
+                    style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
+                  >
+                    {weatherIcon[currentWeather[0].weather[0].icon]}
+                  </SmallIcon>
+                  <TextWrapper>
+                    <DustMark
+                      style={{ backgroundColor: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+                    />
+                    <Dust>{weatherMain[currentWeather[0].weather[0].id]}</Dust>
+                  </TextWrapper>
+                  <TempCurrent
+                    style={{ color: weatherGradient[currentWeather[0].weather[0].icon][0] }}
+                  >
+                    {Math.round(currentWeather[0].main.temp)}°C
+                  </TempCurrent>
+                  <TempToday
+                    style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+                  >
+                    {Math.round(currentWeather[0].main.temp_max)}°C
+                    {' | '}
+                    {Math.round(currentWeather[0].main.temp_min)}°C
+                  </TempToday>
+                </WeatherWrapper>
+                <ConditionDescription
+                  style={{ color: weatherGradient[currentWeather[0].weather[0].icon][1] }}
+                >
+                  {weatherDescription[currentWeather[0].weather[0].id]}
+                </ConditionDescription>
+              </CurrentDustWrapper>
+            </DustInfo>
+            <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
+          </CurrentView>
+        </Backgrounds>
       </>
     )
   )

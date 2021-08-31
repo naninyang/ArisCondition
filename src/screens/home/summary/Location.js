@@ -10,7 +10,7 @@ const StatusWrapper = styled.View({
 });
 
 const CurrentStatus = styled.Text({
-  paddingTop: 10,
+  paddingTop: 20,
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 14,
   color: '#FFFFFF',
