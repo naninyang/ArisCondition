@@ -1,16 +1,29 @@
 import * as React from 'react';
+import { Appearance, Dimensions } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
 import uuid from 'react-native-uuid';
 import styled, { css } from '@emotion/native';
 
-const Container = styled.SafeAreaView({
+const colorScheme = Appearance.getColorScheme();
+
+const status = getStatusBarHeight(true);
+if (isIphoneX()) statusBarHeight = status;
+else statusBarHeight = 0;
+
+const Container = styled.View({
   flex: 1,
-  backgroundColor: '#0D0D0D',
+  backgroundColor: colorScheme === 'light' || null ? '#f2f2f7' : '#000000',
 });
 
 const Header = styled.View({
   flexDirection: 'row',
   paddingHorizontal: 10,
+  borderBottomWidth: 1,
+  borderBottomColor: colorScheme === 'light' || null ? '#c6c6c8' : '#707070',
+  paddingTop: statusBarHeight,
   justifyContent: 'flex-start',
+  backgroundColor: colorScheme === 'light' || null ? '#ffffff' : '#0D0D0D',
 });
 
 const Button = styled.TouchableOpacity({
@@ -23,7 +36,7 @@ const Button = styled.TouchableOpacity({
 const ButtonLabel = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 20,
-  color: '#FFFFFF',
+  color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
 const Heading = styled.View({
@@ -36,23 +49,19 @@ const Heading = styled.View({
 const HeadingLabel = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Bold',
   fontSize: 17,
-  color: '#FFFFFF',
+  color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
-const InfoList = styled.FlatList({
-  marginVertical: 10,
-  borderTopWidth: 1,
-  borderTopColor: '#707070',
-});
+const InfoList = styled.FlatList();
 
 const LinkItem = styled.View({
-  backgroundColor: '#1C1C1E',
+  backgroundColor: colorScheme === 'light' || null ? '#FFFFFF' : '#1C1C1E',
   paddingHorizontal: 15,
 });
 
 const LinkItemWrapper = styled.View({
   borderBottomWidth: 1,
-  borderBottomColor: '#707070',
+  borderBottomColor: colorScheme === 'light' || null ? '#c6c6c8' : '#707070',
 });
 
 const Link = styled.TouchableOpacity({
@@ -65,14 +74,13 @@ const LinkLabel = styled.Text({
   flex: 1,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 17,
-  color: '#FFFFFF',
+  color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
 const LabelBullet = styled.Text({
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 17,
-  opacity: .3,
-  color: '#EBEBF5',
+  color: colorScheme === 'light' || null ? '#c7c7cc' : '#5b5b5f',
 });
 
 // TO-DO: Package Open Licenses List
