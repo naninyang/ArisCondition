@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Appearance, Dimensions } from 'react-native';
+import { Appearance } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 import uuid from 'react-native-uuid';
 import styled, { css } from '@emotion/native';
 

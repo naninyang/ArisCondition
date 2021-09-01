@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Appearance, Dimensions } from 'react-native';
+import { Appearance, StatusBar } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 import uuid from 'react-native-uuid';
 import styled, { css } from '@emotion/native';
 
@@ -132,21 +132,28 @@ function Info({ navigation, route }) {
   };
 
   return (
-    <Container>
-      <Header>
-        <Button onPress={() => { navigation.navigate('home') }}>
-          <ButtonLabel>&#xE000;</ButtonLabel>
-        </Button>
-        <Heading>
-          <HeadingLabel>정보</HeadingLabel>
-        </Heading>
-      </Header>
-      <InfoList
-        data={InfoItem}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
+    <>
+      <StatusBar
+        hidden={false}
+        animated={true}
+        StatusBarAnimation={'slide'}
       />
-    </Container>
+      <Container>
+        <Header>
+          <Button onPress={() => { navigation.navigate('home') }}>
+            <ButtonLabel>&#xE000;</ButtonLabel>
+          </Button>
+          <Heading>
+            <HeadingLabel>정보</HeadingLabel>
+          </Heading>
+        </Header>
+        <InfoList
+          data={InfoItem}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+      </Container>
+    </>
   )
 }
 

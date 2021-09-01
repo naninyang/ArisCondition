@@ -40,7 +40,11 @@ const Home = ({ navigation, route }) => {
 
   return (
     <>
-      <StatusBar hidden={true} />
+      <StatusBar
+        hidden={true}
+        animated={true}
+        StatusBarAnimation={'slide'}
+      />
       <Contents contentContainerStyle='flex:1'>
         <Summary>
           <Button onPress={() => { navigation.navigate('info'); }}>
