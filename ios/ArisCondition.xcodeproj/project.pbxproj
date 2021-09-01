@@ -14,6 +14,7 @@
 		29F032B2CAB64637BB270E11 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */; };
 		45A61DBB5E89406AA14A16A2 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B80B17C0A334251BFF5B6F6 /* SpoqaHanSansNeo-Bold.otf */; };
 		4F5F7E8EE1C649058207D18F /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */; };
+		7E1A9F465D4B4F1291298341 /* FiraCode-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		986B74BE6E1F6D39D92D7BA3 /* libPods-ArisCondition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B841BB1A24477F1FE40F2321 /* libPods-ArisCondition.a */; };
 		B1CD8BF299F94478A663C290 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */; };
@@ -44,6 +45,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ArisCondition/main.m; sourceTree = "<group>"; };
 		4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Regular.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
 		4B80B17C0A334251BFF5B6F6 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Bold.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FiraCode-Regular.otf"; path = "../assets/fonts/FiraCode-Regular.otf"; sourceTree = "<group>"; };
 		59773AAA1D7A48AE9F05F871 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Light.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
 		5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Medium.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
 		794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Thin.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */,
 				794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */,
 				AEF2ACEB165346FEB6A6C10B /* aris-condition-icons.otf */,
+				5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -278,6 +281,7 @@
 				29F032B2CAB64637BB270E11 /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				4F5F7E8EE1C649058207D18F /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				C893C6251C9A47098C0D9413 /* aris-condition-icons.otf in Resources */,
+				7E1A9F465D4B4F1291298341 /* FiraCode-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

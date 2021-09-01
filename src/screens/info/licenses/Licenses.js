@@ -139,21 +139,29 @@ function Licenses({ navigation, route }) {
   };
 
   return (
-    <Container>
-      <Header>
-        <Button onPress={() => { navigation.navigate('info') }}>
-          <ButtonLabel>&#xE000;</ButtonLabel>
-        </Button>
-        <Heading>
-          <HeadingLabel>오픈소스 라이선스</HeadingLabel>
-        </Heading>
-      </Header>
-      <InfoList
-        data={InfoItem}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
+    <>
+      <StatusBar
+        hidden={false}
+        animated={true}
+        StatusBarAnimation={'slide'}
+        barStyle={'dark-content'}
       />
-    </Container>
+      <Container>
+        <Header>
+          <Button onPress={() => { navigation.navigate('info') }}>
+            <ButtonLabel>&#xE000;</ButtonLabel>
+          </Button>
+          <Heading>
+            <HeadingLabel>오픈소스 라이선스</HeadingLabel>
+          </Heading>
+        </Header>
+        <InfoList
+          data={InfoItem}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+      </Container>
+    </>
   )
 }
 

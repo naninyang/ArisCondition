@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StatusBar } from 'react-native';
 import styled, { css } from '@emotion/native';
 
 const Container = styled.SafeAreaView({
@@ -43,8 +44,8 @@ const Contents = styled.ScrollView({
 });
 
 const Code = styled.Text({
-  fontFamily: 'aris-condition-icons',
-  fontSize: 14,
+  fontFamily: 'FiraCode-Regular',
+  fontSize: 12,
   color: '#FFFFFF',
 });
 
@@ -74,19 +75,27 @@ SOFTWARE.
 
 function LicenseReact({ navigation, route }) {
   return (
-    <Container>
-      <Header>
-        <Button onPress={() => { navigation.navigate('licenses') }}>
-          <ButtonLabel>&#xE000;</ButtonLabel>
-        </Button>
-        <Heading>
-          <HeadingLabel>React Native Gesture Handler</HeadingLabel>
-        </Heading>
-      </Header>
-      <Contents>
-        <Code>{code}</Code>
-      </Contents>
-    </Container>
+    <>
+      <StatusBar
+        hidden={false}
+        animated={true}
+        StatusBarAnimation={'slide'}
+        barStyle={'light-content'}
+      />
+      <Container>
+        <Header>
+          <Button onPress={() => { navigation.navigate('licenses') }}>
+            <ButtonLabel>&#xE000;</ButtonLabel>
+          </Button>
+          <Heading>
+            <HeadingLabel>React Native Gesture Handler</HeadingLabel>
+          </Heading>
+        </Header>
+        <Contents>
+          <Code>{code}</Code>
+        </Contents>
+      </Container>
+    </>
   )
 }
 
