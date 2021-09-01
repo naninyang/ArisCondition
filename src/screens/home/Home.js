@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { StatusBar, Dimensions } from 'react-native';
+import { StatusBar } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 import styled, { css } from '@emotion/native';
 
 import useWeather from '../../utils/useWeather';

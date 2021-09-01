@@ -3,46 +3,7 @@ import { StyleSheet } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 import styled, { css } from '@emotion/native';
 
-const Container = styled.SafeAreaView({
-  flex: 1,
-  backgroundColor: '#0D0D0D',
-});
-
-const Header = styled.View({
-  flexDirection: 'row',
-  paddingHorizontal: 10,
-  justifyContent: 'flex-start',
-});
-
-const Button = styled.TouchableOpacity({
-  width: 18,
-  height: 44,
-  justifyContent: 'center',
-  alignItems: 'center',
-});
-
-const ButtonLabel = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Bold',
-  fontSize: 20,
-  color: '#FFFFFF',
-});
-
-const Heading = styled.View({
-  flex: 1,
-  height: 44,
-  justifyContent: 'center',
-  alignItems: 'center',
-});
-
-const HeadingLabel = styled.Text({
-  fontFamily: 'SpoqaHanSansNeo-Bold',
-  fontSize: 17,
-  color: '#FFFFFF',
-});
-
-const Contents = styled.View({
-  margin: 20,
-});
+import InfoItemView from '../../../components/InfoItemView';
 
 const Description = styled.Text({
   paddingBottom: 20,
@@ -69,40 +30,37 @@ const RawData = {
 };
 
 function DataAqp({ navigation, route }) {
+  const goNavigation = () => {
+    navigation.navigate('datas');
+  };
+
   return (
-    <Container>
-      <Header>
-        <Button onPress={() => { navigation.navigate('datas') }}>
-          <ButtonLabel>&#xE000;</ButtonLabel>
-        </Button>
-        <Heading>
-          <HeadingLabel>공기질 데이터</HeadingLabel>
-        </Heading>
-      </Header>
-      <Contents>
-        <Description>아리스컨디션은 세계보건기구 WHO 기준에 따라 8단계로 안내합니다.</Description>
-        <Table borderStyle={{ borderWidth: 1 }}>
-          <Row
-            data={RawData.tableHead}
-            style={styles.head}
+    <InfoItemView
+      currentTitle={'공기질 데이터'}
+      onPress={goNavigation}
+    >
+      <Description>아리스컨디션은 세계보건기구 WHO 기준에 따라 8단계로 안내합니다.</Description>
+      <Table borderStyle={{ borderWidth: 1 }}>
+        <Row
+          data={RawData.tableHead}
+          style={styles.head}
+          textStyle={styles.text}
+        />
+        <TableWrapper style={styles.wrapper}>
+          <Col
+            data={RawData.tableTitle}
+            style={[styles.title, { backgroundColor: `${RawData.tableColor}` }]}
             textStyle={styles.text}
           />
-          <TableWrapper style={styles.wrapper}>
-            <Col
-              data={RawData.tableTitle}
-              style={[styles.title, { backgroundColor: `${RawData.tableColor}` }]}
-              textStyle={styles.text}
-            />
-            <Rows
-              data={RawData.tableData}
-              flexArr={[1, 0, 1]}
-              style={styles.row}
-              textStyle={styles.text}
-            />
-          </TableWrapper>
-        </Table>
-      </Contents>
-    </Container>
+          <Rows
+            data={RawData.tableData}
+            flexArr={[1, 0, 1]}
+            style={styles.row}
+            textStyle={styles.text}
+          />
+        </TableWrapper>
+      </Table>
+    </InfoItemView>
   )
 }
 

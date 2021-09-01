@@ -20,9 +20,9 @@ if (isIphoneX()) {
   screenHeight = Dimensions.get('window').height - status;
   statusBarHeight = status;
   bottomSpaceHeight = getBottomSpace();
-  radius = 45;
-  radiusHeight = statusBarHeight + 45;
-  radiusMinus = -45;
+  radius = 53;
+  radiusHeight = statusBarHeight + 53;
+  radiusMinus = -53;
 }
 else {
   screenHeight = Dimensions.get('window').height;
@@ -33,12 +33,11 @@ else {
   radiusMinus = 0;
 }
 
-const StatusGradient = styled.View({
+const StatusBackground = styled.View({
   height: radiusHeight,
-  backgroundColor: '#FFFFFF',
 });
 
-const Backgrounds = styled(LinearGradient)({
+const Container = styled(LinearGradient)({
   width: '100%',
   height: screenHeight,
   borderTopLeftRadius: radius,
@@ -143,10 +142,10 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
   return (
     currentWeather.length > 0 && (
       <>
-        <StatusGradient
+        <StatusBackground
           style={{ backgroundColor: weatherGradient[currentWeather[0].weather[0].icon][1] }}
         />
-        <Backgrounds colors={weatherGradient[currentWeather[0].weather[0].icon]}>
+        <Container colors={weatherGradient[currentWeather[0].weather[0].icon]}>
           <Header>
             <Location />
           </Header>
@@ -189,7 +188,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
             </DustInfo>
             <DustIconView><LargeIcon>{weatherIcon[currentWeather[0].weather[0].icon]}</LargeIcon></DustIconView>
           </CurrentView>
-        </Backgrounds>
+        </Container>
       </>
     )
   )
