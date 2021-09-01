@@ -3,6 +3,7 @@ import { Appearance, StatusBar } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 import uuid from 'react-native-uuid';
+import _ from 'lodash';
 import styled, { css } from '@emotion/native';
 
 const colorScheme = Appearance.getColorScheme();
@@ -156,7 +157,7 @@ function Licenses({ navigation, route }) {
           </Heading>
         </Header>
         <InfoList
-          data={InfoItem}
+          data={_.sortBy(InfoItem, 'title')}
           renderItem={renderItem}
           keyExtractor={item => item.id}
         />
