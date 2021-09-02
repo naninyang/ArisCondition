@@ -37,7 +37,7 @@ const Summary = styled.View({
 
 const Home = ({ navigation, route }) => {
   const weather = useWeather();
-
+  console.log('WEATHER______  ', { weather });
   return (
     <>
       <StatusBar

@@ -6,6 +6,8 @@ import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
 import LinearGradient from 'react-native-linear-gradient';
 import styled, { css } from '@emotion/native';
 
+import useAddress from '../../../utils/useAddress';
+
 import weatherDescription from '../../../constants/weatherDescription.js';
 import weatherGradient from '../../../constants/weatherGradient.js';
 import weatherIcon from '../../../constants/weatherIcon.js';
@@ -139,6 +141,8 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
     return isSameDay(now, currentDate);
   });
 
+  const address = useAddress();
+
   return (
     currentWeather.length > 0 && (
       <>
@@ -147,7 +151,7 @@ const CurrentDust = ({ forecast: { list, timezone } }) => {
         />
         <Container colors={weatherGradient[currentWeather[0].weather[0].icon]}>
           <Header>
-            <Location />
+            <Location req={address} />
           </Header>
           <CurrentView>
             <CurrentAir />
