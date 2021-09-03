@@ -26,6 +26,7 @@ function useWeather(lat, lon) {
       console.log("Open Weather API conection successed");
       setWeather(data);
     } catch (err) {
+      console.log(err);
       console.log("Open Weather API conection failed");
       const data = await getWeather();
       setWeather(data);

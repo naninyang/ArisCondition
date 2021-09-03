@@ -10,8 +10,8 @@ const callAPI = axios.create({
   timeout: 1000,
 });
 
-function useAddress(lat, lon) {
-  const [address, setAddress] = useState(null);
+function useSite(lat, lon) {
+  const [site, setSite] = useState(null);
   const latLon = useGeoLocation();
 
   useEffect(() => {
@@ -20,29 +20,20 @@ function useAddress(lat, lon) {
 
   const fetchAPI = async (lat, lon) => {
     try {
-      const endpoint = `/address?service=address&key=${API_KEY_ADDRESS}&request=getAddress&point=${lon},${lat}&type=parcel`;
+      const endpoint = `/address?key=${API_KEY_ADDRESS}&point=${lon},${lat}&service=address&request=getAddress&type=parcel`;
       const response = await callAPI.get(endpoint);
-      const data = await storeAddress(filterData(response.data));
+      const data = await storeAddress(response.data.response.result[0].structure.level4L);
       console.log("Vworld API conection successed");
-      setAddress(data);
+      setSite(data);
     } catch (err) {
       console.log(err);
       console.log("Vworld API conection failed");
       const data = await getAddress();
-      setAddress(data);
+      setSite(data);
     }
   };
 
-  return address;
+  return site;
 }
 
-const filterData = (rawData) => {
-  return {
-    structure: {
-      level1: rawData.response.result[0].structure.level1,
-      level4L: rawData.response.result[0].structure.level4L,
-    },
-  };
-};
-
-export default useAddress;
+export default useSite;

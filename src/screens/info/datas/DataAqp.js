@@ -49,7 +49,7 @@ function DataAqp({ navigation, route }) {
         <TableWrapper style={styles.wrapper}>
           <Col
             data={DataTable.tableTitle}
-            style={[styles.title, { backgroundColor: DataTable.tableColor }]}
+            style={[styles.title, { backgroundColor: 'pink' }]}
             textStyle={styles.term}
           />
           <Rows
