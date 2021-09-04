@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Appearance, StyleSheet } from 'react-native';
+import { Appearance } from 'react-native';
 import WrappedText from 'react-native-wrapped-text';
 import styled, { css } from '@emotion/native';
 
@@ -90,7 +90,7 @@ function DataVirus({ navigation, route }) {
         <ReferenceItemMain>대한민국 보건복지부:</ReferenceItemMain>
         <ReferenceItemSub>http://www.mohw.go.kr{"\n"}http://ncov.mohw.go.kr</ReferenceItemSub>
         <ReferenceItemMain>중앙방역대책본부:</ReferenceItemMain>
-        <ReferenceItemSub>http://www.cdc.go.kr/</ReferenceItemSub>
+        <ReferenceItemSub>http://www.cdc.go.kr</ReferenceItemSub>
       </Reference>
     </InfoItemView>
   )

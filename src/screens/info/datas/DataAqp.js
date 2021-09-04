@@ -7,15 +7,15 @@ import InfoItemView from '../../../components/InfoItemView';
 
 const colorScheme = Appearance.getColorScheme();
 
-const Description = styled.Text({
-  paddingVertical: 20,
+const AirInfo = styled.Text({
   lineHeight: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
   color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
-const AirInfo = styled.Text({
+const Description = styled.Text({
+  paddingVertical: 20,
   lineHeight: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
@@ -68,6 +68,7 @@ function DataAqp({ navigation, route }) {
       <AirInfo>미세먼지(Coarse particulate matter) PM10</AirInfo>
       <AirInfo>초미세먼지(Fine particulate matter) PM2.5</AirInfo>
       <AirInfo>단위 ㎍/㎥</AirInfo>
+      <AirInfo>데이터 갱신 매 시간 0분</AirInfo>
       <Description>아리스컨디션은 세계보건기구 WHO 기준에 따라 8단계로 안내합니다.</Description>
       <Table borderStyle={{ borderWidth: 1 }}>
         <Row
@@ -94,7 +95,7 @@ function DataAqp({ navigation, route }) {
         <ReferenceItemSub>https://www.airkorea.or.kr</ReferenceItemSub>
         <ReferenceItemMain>서울특별시 기후대기환경정보:</ReferenceItemMain>
         <ReferenceItemSub>https://cleanair.seoul.go.kr</ReferenceItemSub>
-        <ReferenceItemMain>WHO Air pollution:</ReferenceItemMain>
+        <ReferenceItemMain>WHO Air Pollution:</ReferenceItemMain>
         <ReferenceItemSub>https://www.who.int/westernpacific/health-topics/air-pollution</ReferenceItemSub>
       </Reference>
     </InfoItemView>

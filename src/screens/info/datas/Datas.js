@@ -55,6 +55,11 @@ const InfoItem = [
     title: '바이러스 데이터',
     link: 'dataVirus',
   },
+  {
+    id: uuid.v4(),
+    title: '날씨 데이터',
+    link: 'dataWeather',
+  },
 ];
 
 function Datas({ navigation, route }) {

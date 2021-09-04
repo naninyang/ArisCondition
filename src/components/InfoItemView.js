@@ -75,7 +75,6 @@ function InfoItemView({ children, onPress, currentTitle }) {
         hidden={false}
         animated={true}
         StatusBarAnimation={'slide'}
-        barStyle={'light-content'}
       />
       <Container>
         <Header>

@@ -20,6 +20,7 @@ import Apis from '../screens/info/apis/Apis';
 import Datas from '../screens/info/datas/Datas';
 import DataAqp from '../screens/info/datas/DataAqp';
 import DataVirus from '../screens/info/datas/DataVirus';
+import DataWeather from '../screens/info/datas/DataWeather';
 
 import AppInfo from '../screens/info/app/AppInfo';
 
@@ -87,6 +88,10 @@ function ScreenStack() {
       <HomeStack.Screen
         name='dataVirus'
         component={DataVirus}
+      />
+      <HomeStack.Screen
+        name='dataWeather'
+        component={DataWeather}
       />
 
       <HomeStack.Screen
