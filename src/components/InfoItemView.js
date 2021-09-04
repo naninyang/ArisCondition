@@ -39,7 +39,7 @@ const HeadingLabel = styled.Text({
   color: '#FFFFFF',
 });
 
-const Contents = styled.View({
+const Contents = styled.ScrollView({
   margin: 20,
 });
 

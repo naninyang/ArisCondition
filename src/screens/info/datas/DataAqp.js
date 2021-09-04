@@ -1,22 +1,48 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { Appearance, StyleSheet } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 import styled, { css } from '@emotion/native';
 
 import InfoItemView from '../../../components/InfoItemView';
 
+const colorScheme = Appearance.getColorScheme();
+
 const Description = styled.Text({
-  paddingBottom: 20,
+  paddingVertical: 20,
   lineHeight: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
   color: '#FFFFFF',
 });
 
+const AirInfo = styled.Text({
+  lineHeight: 20,
+  fontFamily: 'SpoqaHanSansNeo-Regular',
+  fontSize: 14,
+  color: '#FFFFFF',
+});
+
+const Reference = styled.View({
+  marginTop: 20,
+});
+
+const ReferenceItemMain = styled.Text({
+  paddingBottom: 5,
+  fontFamily: 'SpoqaHanSansNeo-bold',
+  fontSize: 14,
+  color: colorScheme === 'light' || null ? '#000000' : '#FFFFFF',
+});
+
+const ReferenceItemSub = styled.Text({
+  paddingBottom: 10,
+  fontFamily: 'SpoqaHanSansNeo-regular',
+  fontSize: 14,
+  color: colorScheme === 'light' || null ? '#000000' : '#FFFFFF',
+});
+
 const DataTable = {
   tableHead: ['', '미세먼지', '초미세먼지'],
   tableTitle: ['최고', '좋음', '양호', '보통', '나쁨', '상당히 나쁨', '매우 나쁨', '최악'],
-  tableColor: ["#FFEA00", "#00E676", "#1DE9B6", "#00B0FF", "#651FFF", "#AA00FF", "#C51162", "#FF1744"],
   tableData: [
     ['0~15', '0~8'],
     ['16~30', '9~15'],
@@ -39,6 +65,9 @@ function DataAqp({ navigation, route }) {
       currentTitle={'공기질 데이터'}
       onPress={goNavigation}
     >
+      <AirInfo>미세먼지(Coarse particulate matter) PM10</AirInfo>
+      <AirInfo>초미세먼지(Fine particulate matter) PM2.5</AirInfo>
+      <AirInfo>단위 ㎍/㎥</AirInfo>
       <Description>아리스컨디션은 세계보건기구 WHO 기준에 따라 8단계로 안내합니다.</Description>
       <Table borderStyle={{ borderWidth: 1 }}>
         <Row
@@ -49,7 +78,7 @@ function DataAqp({ navigation, route }) {
         <TableWrapper style={styles.wrapper}>
           <Col
             data={DataTable.tableTitle}
-            style={[styles.title, { backgroundColor: 'pink' }]}
+            style={styles.title}
             textStyle={styles.term}
           />
           <Rows
@@ -60,6 +89,14 @@ function DataAqp({ navigation, route }) {
           />
         </TableWrapper>
       </Table>
+      <Reference>
+        <ReferenceItemMain>대기오염실시간공개시스템:</ReferenceItemMain>
+        <ReferenceItemSub>https://www.airkorea.or.kr</ReferenceItemSub>
+        <ReferenceItemMain>서울특별시 기후대기환경정보:</ReferenceItemMain>
+        <ReferenceItemSub>https://cleanair.seoul.go.kr</ReferenceItemSub>
+        <ReferenceItemMain>WHO Air pollution:</ReferenceItemMain>
+        <ReferenceItemSub>https://www.who.int/westernpacific/health-topics/air-pollution</ReferenceItemSub>
+      </Reference>
     </InfoItemView>
   )
 }
@@ -67,13 +104,14 @@ function DataAqp({ navigation, route }) {
 const styles = StyleSheet.create({
   head: {
     height: 40,
-    backgroundColor: '#212121',
+    backgroundColor: '#ff375f',
   },
   wrapper: {
     flexDirection: 'row',
   },
   title: {
     flex: 1,
+    backgroundColor: '#636366',
   },
   row: {
     height: 40,

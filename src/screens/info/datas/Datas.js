@@ -52,7 +52,7 @@ const InfoItem = [
   },
   {
     id: uuid.v4(),
-    title: '바이러스 확진자 데이터',
+    title: '바이러스 데이터',
     link: 'dataVirus',
   },
 ];
