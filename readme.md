@@ -16,6 +16,7 @@ $ cd ArisCondition
 
 # npm packages install
 $ npm ci
+# npm i 또는 npm install 명령보다 npm ci 명령을 추천합니다. (npm@5.7.1부터 지원)
 
 # CocoaPots intall
 $ npx pod-intall
@@ -78,7 +79,7 @@ https://api.openweathermap.org/data/2.5
 
 API Key는 개발자 개인이 신청하여 발급받은 Key를 로컬의 프로젝트 루트 디렉토리에 .env 파일을 생성하여 관리해야 합니다.
 
-## dotenv (.env)
+## dotenv (project root/.env)
 ```text
 API_URL_WEATHER=https://api.openweathermap.org/data/2.5
 API_KEY_WEATHER=신청한 키 입력
