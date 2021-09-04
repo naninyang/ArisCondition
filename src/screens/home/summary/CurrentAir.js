@@ -499,17 +499,54 @@ function CurrentAir() {
         <AirConditionWrapper>
           {
             (() => {
-              if (aqi.data.iaqi.pm10.v > 75 || aqi.data.iaqi.pm25.v > 37) {
+              if (
+                aqi.data.iaqi.pm10.v < 51
+                &&
+                aqi.data.iaqi.pm25.v < 26
+              ) {
                 return (
-                  <AirConditionDesction style={{ color: '#FF1744' }}>
+                  <AirConditionDesction style={{ color: '#F57F17' }}>
+                    맑은 공기 많이 마셔요
+                  </AirConditionDesction>
+                )
+              }
+              else if (
+                aqi.data.iaqi.pm10.v < 76
+                &&
+                aqi.data.iaqi.pm25.v < 38
+              ) {
+                return (
+                  <AirConditionDesction style={{ color: '#651FFF' }}>
+                    외출은 오래하지 마세요
+                  </AirConditionDesction>
+                )
+              }
+              else if (
+                aqi.data.iaqi.pm10.v < 101
+                &&
+                aqi.data.iaqi.pm25.v < 51
+              ) {
+                return (
+                  <AirConditionDesction style={{ color: '#AA00FF' }}>
+                    바깥 운동은 자제해요
+                  </AirConditionDesction>
+                )
+              }
+              else if (
+                aqi.data.iaqi.pm10.v < 151
+                &&
+                aqi.data.iaqi.pm25.v < 76
+              ) {
+                return (
+                  <AirConditionDesction style={{ color: '#C51162' }}>
                     출근은 해로워요
                   </AirConditionDesction>
                 )
               }
               else {
                 return (
-                  <AirConditionDesction style={{ color: '#F57F17' }}>
-                    맑은 공기 많이 마셔요
+                  <AirConditionDesction style={{ color: '#FF1744' }}>
+                    생명에 위협이 되는 수준입니다
                   </AirConditionDesction>
                 )
               }
