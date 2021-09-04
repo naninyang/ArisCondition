@@ -12,14 +12,14 @@ const Description = styled.Text({
   lineHeight: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
-  color: '#FFFFFF',
+  color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
 const AirInfo = styled.Text({
   lineHeight: 20,
   fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: 14,
-  color: '#FFFFFF',
+  color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
 });
 
 const Reference = styled.View({
@@ -104,17 +104,18 @@ function DataAqp({ navigation, route }) {
 const styles = StyleSheet.create({
   head: {
     height: 40,
-    backgroundColor: '#ff375f',
+    backgroundColor: colorScheme === 'light' || null ? '#ff2d55' : '#ff375f',
   },
   wrapper: {
     flexDirection: 'row',
   },
   title: {
     flex: 1,
-    backgroundColor: '#636366',
+    backgroundColor: colorScheme === 'light' || null ? '#2c2c2e' : '#636366',
   },
   row: {
     height: 40,
+    backgroundColor: colorScheme === 'light' || null ? '#FFFFFF' : '#000000',
   },
   term: {
     fontFamily: 'SpoqaHanSansNeo-Bold',
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
   description: {
     fontFamily: 'SpoqaHanSansNeo-Regular',
     textAlign: 'center',
-    color: '#FFFFFF',
+    color: colorScheme === 'light' || null ? '#0D0D0D' : '#FFFFFF',
   },
 });
 
