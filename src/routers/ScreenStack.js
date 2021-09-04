@@ -8,12 +8,12 @@ import Info from '../screens/info/Info';
 import Donate from '../screens/info/donate/Donate';
 
 import Licenses from '../screens/info/licenses/Licenses';
-import LicenseReact from '../screens/info/licenses/LicenseReact';
-import LicenseReactNative from '../screens/info/licenses/LicenseReactNative';
-import LicenseReactNativeGestureHandler from '../screens/info/licenses/LicenseReactNativeGestureHandler';
-import LicenseReactNativeLinearGradient from '../screens/info/licenses/LicenseReactNativeLinearGradient';
-import LicenseReactNativeSafeAreaContext from '../screens/info/licenses/LicenseReactNativeSafeAreaContext';
-import LicenseReactNativeScreens from '../screens/info/licenses/LicenseReactNativeScreens';
+import ReactFacebook from '../screens/info/licenses/ReactFacebook';
+import ReactNative from '../screens/info/licenses/ReactNative';
+import ReactNativeGestureHandler from '../screens/info/licenses/ReactNativeGestureHandler';
+import ReactNativeLinearGradient from '../screens/info/licenses/ReactNativeLinearGradient';
+import ReactNativeSafeAreaContext from '../screens/info/licenses/ReactNativeSafeAreaContext';
+import ReactNativeScreens from '../screens/info/licenses/ReactNativeScreens';
 
 import Apis from '../screens/info/apis/Apis';
 
@@ -48,28 +48,28 @@ function ScreenStack() {
         component={Licenses}
       />
       <HomeStack.Screen
-        name='licenseReact'
-        component={LicenseReact}
+        name='reactFacebook'
+        component={ReactFacebook}
       />
       <HomeStack.Screen
-        name='licenseReactNative'
-        component={LicenseReactNative}
+        name='reactNative'
+        component={ReactNative}
       />
       <HomeStack.Screen
-        name='licenseReactNativeGestureHandler'
-        component={LicenseReactNativeGestureHandler}
+        name='reactNativeGestureHandler'
+        component={ReactNativeGestureHandler}
       />
       <HomeStack.Screen
-        name='licenseReactNativeLinearGradient'
-        component={LicenseReactNativeLinearGradient}
+        name='reactNativeLinearGradient'
+        component={ReactNativeLinearGradient}
       />
       <HomeStack.Screen
-        name='licenseReactNativeSafeAreaContext'
-        component={LicenseReactNativeSafeAreaContext}
+        name='reactNativeSafeAreaContext'
+        component={ReactNativeSafeAreaContext}
       />
       <HomeStack.Screen
-        name='licenseReactNativeScreens'
-        component={LicenseReactNativeScreens}
+        name='reactNativeScreens'
+        component={ReactNativeScreens}
       />
 
       <HomeStack.Screen

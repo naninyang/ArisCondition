@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Appearance, StatusBar } from 'react-native';
+import { Appearance } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { isIphoneX } from 'react-native-iphone-x-helper';
-import uuid from 'react-native-uuid';
 import _ from 'lodash';
 import styled, { css } from '@emotion/native';
 
 import InfoListView from '../../../components/InfoListView';
+import ListItem from './ListItem';
 
 const colorScheme = Appearance.getColorScheme();
 
@@ -45,41 +45,6 @@ const LabelBullet = styled.Text({
   color: colorScheme === 'light' || null ? '#c7c7cc' : '#5b5b5f',
 });
 
-// TO-DO: Package Open Licenses List
-// TO-DO: Fonts Licenses List
-const InfoItem = [
-  {
-    id: uuid.v4(),
-    title: 'React',
-    link: 'licenseReact',
-  },
-  {
-    id: uuid.v4(),
-    title: 'React Native',
-    link: 'licenseReactNative',
-  },
-  {
-    id: uuid.v4(),
-    title: 'React Native Gesture Handler',
-    link: 'licenseReactNativeGestureHandler',
-  },
-  {
-    id: uuid.v4(),
-    title: 'react-native-linear-gradient',
-    link: 'licenseReactNativeLinearGradient',
-  },
-  {
-    id: uuid.v4(),
-    title: 'react-native-safe-area-context',
-    link: 'licenseReactNativeSafeAreaContext',
-  },
-  {
-    id: uuid.v4(),
-    title: 'React Native Screens',
-    link: 'licenseReactNativeScreens',
-  },
-];
-
 function Licenses({ navigation, route }) {
   const Item = ({ title, link }) => (
     <LinkItem>
@@ -110,7 +75,7 @@ function Licenses({ navigation, route }) {
       onPress={goNavigation}
     >
       <InfoList
-        data={_.sortBy(InfoItem, 'title')}
+        data={_.sortBy(ListItem, 'title')}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />

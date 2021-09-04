@@ -1,6 +1,4 @@
 import * as React from 'react';
-import styled, { css } from '@emotion/native';
-
 import InfoLicenses from '../../../components/InfoLicenses';
 
 let code = `
