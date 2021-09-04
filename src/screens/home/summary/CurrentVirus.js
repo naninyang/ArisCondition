@@ -54,6 +54,12 @@ const CoronicLevel = styled.Text({
   color: '#FF1744',
 });
 
+const CoronicMessage = styled.Text({
+  fontFamily: 'SpoqaHanSansNeo-Bold',
+  fontSize: 18,
+  color: "#F57F17",
+});
+
 function CurrentVirus() {
   const [coronic, setCoronic] = React.useState(null);
   const [distance, setDistance] = React.useState(null);
@@ -86,8 +92,25 @@ function CurrentVirus() {
             <Coronic>{coronic.korea.newCase}명</Coronic>
           </TextWrapper>
         </CoronicWrapper>
-        <CoronicLevel>수도권 거리두기 {distance.metropolitan}단계</CoronicLevel>
-        <CoronicLevel>비수도권 거리두기 {distance.other}단계</CoronicLevel>
+        {
+          (() => {
+            if (distance.status === true) {
+              return (
+                <>
+                  <CoronicLevel>수도권 거리두기 {distance.metropolitan}단계</CoronicLevel>
+                  <CoronicLevel>비수도권 거리두기 {distance.other}단계</CoronicLevel>
+                </>
+              )
+            }
+            else {
+              return (
+                <>
+                  <CoronicMessage>{distance.message}</CoronicMessage>
+                </>
+              )
+            }
+          })()
+        }
       </CurrentVirusWrapper>
     </VirusInfo>
   );
