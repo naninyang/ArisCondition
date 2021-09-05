@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Appearance } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { isIphoneX } from 'react-native-iphone-x-helper';
+import { getBottomSpace, isIphoneX } from 'react-native-iphone-x-helper';
 import _ from 'lodash';
 import styled, { css } from '@emotion/native';
 
@@ -11,8 +11,14 @@ import ListItem from './ListItem';
 const colorScheme = Appearance.getColorScheme();
 
 const status = getStatusBarHeight(true);
-if (isIphoneX()) statusBarHeight = status;
-else statusBarHeight = 0;
+if (isIphoneX()) {
+  statusBarHeight = status;
+  bottomSpaceHeight = getBottomSpace();
+}
+else {
+  statusBarHeight = 0;
+  bottomSpaceHeight = 0;
+}
 
 const InfoList = styled.FlatList();
 
@@ -78,6 +84,7 @@ function Licenses({ navigation, route }) {
         data={_.sortBy(ListItem, 'title')}
         renderItem={renderItem}
         keyExtractor={item => item.id}
+        contentContainerStyle={{ paddingBottom: statusBarHeight }}
       />
     </InfoListView>
   )

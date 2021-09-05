@@ -25,7 +25,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `;
 
-function LicenseReact({ navigation, route }) {
+function ReactFacebook({ navigation, route }) {
   const goNavigation = () => {
     navigation.navigate('licenses');
   };
@@ -40,4 +40,4 @@ function LicenseReact({ navigation, route }) {
   )
 }
 
-export default LicenseReact;
+export default ReactFacebook;

@@ -1,12 +1,10 @@
 import * as React from 'react';
-import styled, { css } from '@emotion/native';
-
 import InfoLicenses from '../../../components/InfoLicenses';
 
 let code = `
 MIT License
 
-Copyright (c) 2016 React Native Community
+Copyright (c) 2019 Proyecto 26
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,14 +25,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `;
 
-function ReactNativeLinearGradient({ navigation, route }) {
+function ReactNativeInappbrowserReborn({ navigation, route }) {
   const goNavigation = () => {
     navigation.navigate('licenses');
   };
 
   return (
     <InfoLicenses
-      currentTitle={'react-native-linear-gradient'}
+      currentTitle={'InAppBrowser for React Native'}
       onPress={goNavigation}
     >
       {code}
@@ -42,4 +40,4 @@ function ReactNativeLinearGradient({ navigation, route }) {
   )
 }
 
-export default ReactNativeLinearGradient;
+export default ReactNativeInappbrowserReborn;
