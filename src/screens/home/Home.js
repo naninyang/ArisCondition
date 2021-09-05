@@ -14,6 +14,7 @@ else statusBarHeight = 0;
 
 const Contents = styled.ScrollView({
   width: '100%',
+  backgroundColor: '#000000',
 });
 
 const Button = styled.TouchableOpacity({

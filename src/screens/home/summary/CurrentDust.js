@@ -37,6 +37,8 @@ else {
 
 const StatusBackground = styled.View({
   height: radiusHeight,
+  borderTopLeftRadius: radius,
+  borderTopRightRadius: radius,
 });
 
 const Container = styled(LinearGradient)({
