@@ -18,8 +18,8 @@ $ cd ArisCondition
 $ npm ci
 # npm i 또는 npm install 명령보다 npm ci 명령을 추천합니다. (npm@5.7.1부터 지원)
 
-# CocoaPots intall
-$ npx pod-intall
+# CocoaPots install
+$ npx pod-install
 ```
 
 ### Metro Start
