@@ -19,6 +19,7 @@
 		986B74BE6E1F6D39D92D7BA3 /* libPods-ArisCondition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B841BB1A24477F1FE40F2321 /* libPods-ArisCondition.a */; };
 		B1CD8BF299F94478A663C290 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */; };
 		C33A0230B39F79132CBF720C /* libPods-ArisCondition-ArisConditionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C0E547C73F922B59EA328D /* libPods-ArisCondition-ArisConditionTests.a */; };
+		C56D04F5270D496300010F69 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D04F4270D496300010F69 /* File.swift */; };
 		C893C6251C9A47098C0D9413 /* aris-condition-icons.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEF2ACEB165346FEB6A6C10B /* aris-condition-icons.otf */; };
 		F77B7AC96DD64C838BAEE799 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 59773AAA1D7A48AE9F05F871 /* SpoqaHanSansNeo-Light.otf */; };
 /* End PBXBuildFile section */
@@ -43,19 +44,21 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ArisCondition/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ArisCondition/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ArisCondition/main.m; sourceTree = "<group>"; };
-		4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Regular.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
-		4B80B17C0A334251BFF5B6F6 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Bold.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
-		5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FiraCode-Regular.otf"; path = "../assets/fonts/FiraCode-Regular.otf"; sourceTree = "<group>"; };
-		59773AAA1D7A48AE9F05F871 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Light.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
-		5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Medium.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
-		794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Thin.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
+		4775587408DF4A99A51FF7AF /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Regular.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		4B80B17C0A334251BFF5B6F6 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Bold.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FiraCode-Regular.otf"; path = "../assets/fonts/FiraCode-Regular.otf"; sourceTree = "<group>"; };
+		59773AAA1D7A48AE9F05F871 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Light.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
+		5C208D7C5EA84F52A8DEF71F /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Medium.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		794786742D024471AC70E04F /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Thin.otf"; path = "../assets/fonts/SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ArisCondition/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C0E547C73F922B59EA328D /* libPods-ArisCondition-ArisConditionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArisCondition-ArisConditionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4EE68F03B3C226DBCC4BF7 /* Pods-ArisCondition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition.release.xcconfig"; path = "Target Support Files/Pods-ArisCondition/Pods-ArisCondition.release.xcconfig"; sourceTree = "<group>"; };
 		ADF23D7EE31C3791EAE5F4A0 /* Pods-ArisCondition-ArisConditionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition-ArisConditionTests.debug.xcconfig"; path = "Target Support Files/Pods-ArisCondition-ArisConditionTests/Pods-ArisCondition-ArisConditionTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AEF2ACEB165346FEB6A6C10B /* aris-condition-icons.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "aris-condition-icons.otf"; path = "../assets/fonts/aris-condition-icons.otf"; sourceTree = "<group>"; };
+		AEF2ACEB165346FEB6A6C10B /* aris-condition-icons.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "aris-condition-icons.otf"; path = "../assets/fonts/aris-condition-icons.otf"; sourceTree = "<group>"; };
 		B841BB1A24477F1FE40F2321 /* libPods-ArisCondition.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArisCondition.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04690D0A8189E9644C06782 /* Pods-ArisCondition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition.debug.xcconfig"; path = "Target Support Files/Pods-ArisCondition/Pods-ArisCondition.debug.xcconfig"; sourceTree = "<group>"; };
+		C56D04F3270D496200010F69 /* ArisCondition-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArisCondition-Bridging-Header.h"; sourceTree = "<group>"; };
+		C56D04F4270D496300010F69 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E664A20F418E8727FDD7D683 /* Pods-ArisCondition-ArisConditionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArisCondition-ArisConditionTests.release.xcconfig"; path = "Target Support Files/Pods-ArisCondition-ArisConditionTests/Pods-ArisCondition-ArisConditionTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -106,6 +109,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C56D04F4270D496300010F69 /* File.swift */,
+				C56D04F3270D496200010F69 /* ArisCondition-Bridging-Header.h */,
 			);
 			name = ArisCondition;
 			sourceTree = "<group>";
@@ -160,7 +165,6 @@
 				ADF23D7EE31C3791EAE5F4A0 /* Pods-ArisCondition-ArisConditionTests.debug.xcconfig */,
 				E664A20F418E8727FDD7D683 /* Pods-ArisCondition-ArisConditionTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,7 +180,6 @@
 				5637403FB08F489C9D3079A6 /* FiraCode-Regular.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +241,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				C56D04F5270D496300010F69 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADF23D7EE31C3791EAE5F4A0 /* Pods-ArisCondition-ArisConditionTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -495,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E664A20F418E8727FDD7D683 /* Pods-ArisCondition-ArisConditionTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ArisConditionTests/Info.plist;
@@ -535,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ArisCondition;
+				SWIFT_OBJC_BRIDGING_HEADER = "ArisCondition-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -560,6 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ArisCondition;
+				SWIFT_OBJC_BRIDGING_HEADER = "ArisCondition-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
